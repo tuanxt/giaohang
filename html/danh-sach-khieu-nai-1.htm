@@ -1,0 +1,316 @@
+<!DOCTYPE html><html lang="en-US"><head>    <meta charset="UTF-8">    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">    <title>Danh sách khiếu nại</title>    <meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta name="copyright" content="Dịch vụ đặt hàng | Taobao, Tmall, 1688 | Order hàng Trung Quốc - Nguonhang24h.vn">
+<link href="/customer/css/system.css?ver=2" rel="stylesheet">    <script src="/customer/plugins/jQuery/jQuery-2.1.4.min.js"></script>    <script>        var homeUrl = 'https://nguonhang24h.vn';        var uid = 3881;    </script></head><body class="skin-blue sidebar-mini wysihtml5-supported fixed"><div class="wrapper">    <header class="main-header">
+    <!-- Logo -->
+    <a href="/" target="_blank" class="logo" title="Trang chủ">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+
+        <span class="logo-mini"><b>HA</b>D</span>
+        <!-- logo for regular state and mobile devices -->
+<!--        <span class="logo-lg"><b>Admin</b>LTE</span>-->
+        <span class="logo-lg"><i class="fa fa-fw fa-truck"></i><b>Logistics</b></span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top" role="navigation">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+        </a>
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav" style="position: relative;">
+                <li class="info-box-number text-red">
+                    <a href="#">Tỷ giá: <b>3,399</b> CNY</a>
+                </li>                
+                <li class="tasks-menu cart-user" >
+                    <a href="/gio-hang" title="Giỏ hàng">
+                        <i class="fa fa-fw fa-shopping-cart"></i>
+                        <span class="label label-danger">1</span>
+                    </a>
+                </li>
+                <!-- Messages: style can be found in dropdown.less-->
+                <li class="dropdown messages-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="label label-success total-message">0</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">Bạn có <span class="total-message">0</span> tin nhắn</li>
+                        <li>
+                            <ul class="menu sub-messages">
+
+                            </ul>
+                        </li>
+                        <li class="footer"><a href="/dashboard">Tất cả</a></li>
+                    </ul>
+                </li>
+                <!-- Notifications: style can be found in dropdown.less -->
+                <!-- <li class="dropdown notifications-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-bell-o"></i>
+                        <span class="label label-warning total-message">0</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">Bạn có <span class="total-message">0</span> tin nhắn</li>
+                        <li>
+                            <ul class="menu sub-messages">
+                                
+                                
+                            </ul>
+                        </li>
+                        <li class="footer"><a href="/sms-all">Tất cả</a></li>
+                    </ul>
+                </li> -->
+                <!-- Control Sidebar Toggle Button -->
+                <li class="user user-menu">
+                    <a href="/logout"><i class="glyphicon glyphicon-log-out"></i> Thoát</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+</header>    <!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+            <div class="pull-left image">
+                https://nguonhang24h.vn/file/media/avatar/default_user_icon.png            </div>
+            <div class="pull-left info">
+                <p>langtuhoabinh</p>
+                <a><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+        </div>
+
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+            <li class="header vdt">
+                <div class="box-bank">
+                    <div class="text-center">
+                        <i class="fa fa-money" aria-hidden="true"></i>&nbsp;&nbsp;VĐT:&nbsp; <b class="text-red">0 <em>đ</em></b>
+                    </div>
+                </div>
+            </li>
+            <li class="header">CHỨC NĂNG</li>
+            <li class=" treeview menu-open">
+                <a href="/dashboard">
+                    <i class="fa fa-dashboard"></i> <span>Thông tin chung</span>
+                </a>
+            </li>
+            <li class="treeview  ">
+                <a href="#">
+                    <i class="fa fa-fw fa-truck"></i>
+                    <span>Đặt hàng</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="" ><a href="/gio-hang"><i class="fa fa-cart-plus" aria-hidden="true"></i> Giỏ hàng</a></li>
+                    <li class="" ><a href="/dat-hang"><i class="fa fa-download" aria-hidden="true"></i> Tạo đơn hàng nhập</a></li>
+                </ul>
+            </li>
+
+            <li class="treeview ">
+                <a href="#">
+                    <i class="fa fa-files-o"></i> <span>Quản lý đơn hàng</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="">
+                        <a href="/don-hang"><i class="fa fa-fw fa-reorder" aria-hidden="true"></i>Tất cả đơn hàng <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></a>
+                    </li>
+                    <!--<li class="">
+                        <a href="/don-hang-7"><i class="fa fa-fw fa-hourglass-2"></i> Chờ báo giá <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title=" đơn"></span></span></a>
+                    </li>-->
+                    <li class="">
+                        <a href="/don-hang-1" ><i class="fa fa-fw fa-hand-lizard-o"></i>Chờ đặt cọc <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></span></a>
+                    </li>
+                    <li class="">
+                        <a href="/don-hang-2" ><i class="fa fa-fw fa-truck"></i>Đang đặt hàng <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></span></a></li>
+
+                    <li class="">
+                        <a href="/don-hang-3" ><i class="fa fa-fw fa-check-square-o"></i>Đã đặt hàng <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></span></a>
+                    </li>
+                    <li class="">
+                        <a href="/don-hang-4" ><i class="fa fa-fw fa-check"></i>Shop xưởng giao <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></a>
+                    </li>
+                    <li class="">
+                        <a href="/don-hang-8" ><i class="fa fa-fw fa-check"></i>Đang vận chuyển <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></a>
+                    </li>
+                    <li class="">
+                        <a href="/don-hang-9" ><i class="fa fa-fw fa-check"></i>Kho VN nhận <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></a>
+                    </li>
+                    <li class="">
+                        <a href="/don-hang-6" ><i class="fa fa-fw fa-mail-forward"></i>Đã trả hàng <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></a>
+                    </li>
+                    <li class="">
+                        <a href="/don-hang-5" ><i class="fa fa-fw fa-close"></i>Đã hủy <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview ">
+                <a href="/don-ki-gui">
+                    <i class="fa fa-fw fa-car"></i>
+                    <span>Đơn hàng ký gửi</span>
+                </a>
+            </li>
+            <li class="treeview ">
+                <a href="#">
+                    <i class="fa fa-fw fa-dollar"></i> <span>Ví điện tử</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/huong-dan-su-dung-vi-dien-tu-63"><i class="fa fa-fw fa-money" aria-hidden="true"></i>Hướng dẫn nạp tiền</a></li>
+                    <li class=""><a class=" " href="/lich-su-giao-dich"><i class="fa fa-fw fa-history" aria-hidden="true"></i>Lịch sử giao dịch</a></li>
+                    <li class=""><a class="" href="/rut-tien"><i class="fa fa-fw fa-hand-lizard-o" aria-hidden="true"></i>Rút tiền</a></li>
+                </ul>
+            </li>
+            <li class="treeview active">
+                <a href="#">
+                    <i class="fa fa-fw fa-warning"></i> <span>Đơn hàng khiếu nại</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="/danh-sach-khieu-nai" class="active "><i class="fa fa-fw fa-reorder" aria-hidden="true"></i> Tất cả
+                            <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/danh-sach-khieu-nai-1" class="active "><i class="fa fa-fw fa-hourglass-2" aria-hidden="true"></i> Chờ xử lý
+                            <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></a></li>
+                    <li>
+                        <a href="/danh-sach-khieu-nai-4" class="active "><i class="fa fa-fw fa-refresh" aria-hidden="true"></i> Đang xử lý
+                            <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></a></li>
+                    <li>
+                        <a href="/danh-sach-khieu-nai-2" class="active "><i class="fa fa-fw fa-check-square-o" aria-hidden="true"></i> Đã xử lý
+                            <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></a></li>
+                    <li>
+                        <a href="/danh-sach-khieu-nai-3" class="active "><i class="fa fa-fw fa-remove" aria-hidden="true"></i> Đã hủy
+                            <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview ">
+                <a href="#">
+                    <i class="fa fa-fw fa-user"></i> <span>Thông tin cá nhân</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                        <li><a href="/thong-tin-ca-nhan" class="active "><i class="fa fa-fw fa-user-secret" aria-hidden="true"></i>Thông tin cá nhân</a>
+                        </li>
+                        <!--<li>
+                                <a href="/thanh-vien/dia-chi-giao-hang" class="active "><i class="fa fa-user-circle-o" aria-hidden="true"></i>Địa chỉ giao hàng</a>
+                            </li>-->
+                        <li class="last">
+                            <a href="/thay-doi-mat-khau" class="active "><i class="fa fa-compass" aria-hidden="true"></i>Thay đổi mật khẩu</a>
+                        </li>
+                </ul>
+            </li>
+                        <li class="info-box-number text-red">
+                <a style="color: #fff" href="#"><i class="fa fa-fw fa-dollar"></i> Tỷ giá: <b>3,399</b> CNY</a>
+            </li>
+            <li class="info-box-number text-red">
+                <a style="color: #fff" href="#"><i class="fa fa-fw fa-phone"></i> Hà Nội: <b>0931.45.1688</b></a>
+            </li>
+            <li class="info-box-number text-red">
+                <a style="color: #fff" href="#"><i class="fa fa-fw fa-phone"></i> Hồ Chí Minh: <b>0932.45.1688</b></a>
+            </li>
+            <li class="info-box-number text-red">
+                <a style="color: #fff" href="#"><i class="fa fa-fw fa-phone"></i> Chăm sóc KH: <b>091.190.1688</b></a>
+            </li>
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>    <div class="content-wrapper">        <section class="content-header">                        </section>        <!-- Main content -->        <section class="content pt0">                <div class="tb-complain-index">
+    
+<div class="menu-complain">
+<ul class="step-action">
+    <li class="active">
+        <a href="/danh-sach-khieu-nai-1" class="active">Chờ xử lý<span class="badge bg-aqua" style="margin-left: 5px"> 0</span></a>
+    </li>
+    <li class="">
+        <a href="/danh-sach-khieu-nai-4" class="active">Đang xử lý<span class="badge bg-aqua" style="margin-left: 5px"> 0</span></a>
+    </li>
+    <li class="">
+        <a href="/danh-sach-khieu-nai-2" class="active">Đã xử lý<span class="badge b bg-aqua" style="margin-left: 5px"> 0</span></a>
+    </li>
+    <li class="">
+        <a href="/danh-sach-khieu-nai-3" class="active">Đã hủy<span class="badge bg-aqua" style="margin-left: 5px"> 0</span></a>
+    </li>
+</ul>
+</div>    <!--search-->
+   <div class="pull-left clearfix" style="margin-bottom: 10px"> <div class="tb-complain-search">
+    <form id="complain-search-form" action="/danh-sach-khieu-nai" method="post">
+<input type="hidden" name="_csrf" value="jxuoPV-PK9GJHSdzqz99b0Mjiq1-9ve9dvIZOGWOqhy84KuPA0an5NzilPgg4T0nUclzbRuyi2Pz8H3Ljjze5A==">
+     <div class="rows">
+            <div class="form-text ext-full">
+            <div class="form-group field-tbcomplainsearch-orderid">
+
+<input type="text" id="tbcomplainsearch-orderid" class="form-control" name="TbComplainSearch[orderID]" placeholder="Mã đơn hàng">
+
+<div class="help-block"></div>
+</div>        </div>
+        <div class="form-text ext-full">
+            <div class="form-group field-startDate">
+<div class="input-group"><div class="input-group-addon"><i class="fa fa-calendar"></i> </div><input type="text" id="startDate" class="form-control" name="TbComplainSearch[startDate]" placeholder="Từ ngày"></div>
+</div>        </div>
+        <div class="form-text ext-full">
+            <div class="form-group field-endDate">
+<div class="input-group"><div class="input-group-addon"><i class="fa fa-calendar"></i> </div><input type="text" id="endDate" class="form-control" name="TbComplainSearch[endDate]" placeholder="Đến ngày"></div>
+</div>        </div>
+        <div class="form-text ext-full">
+            <div class="form-group field-tbcomplainsearch-status">
+
+<select id="tbcomplainsearch-status" class="form-control select2" name="TbComplainSearch[status]" style="width:100%" data-placeholder="Trạng thái đơn">
+<option value=""></option>
+<option value="1" selected>Chờ xử lý</option>
+<option value="4">Đang xử lý</option>
+<option value="2">Đã xử lý</option>
+<option value="3">Đã hủy</option>
+</select>
+
+<div class="help-block"></div>
+</div>        </div>
+           <button type="submit" id="btn-search-order" name="op" value="Tìm kiếm" class="btn btn-primary btn-flat">
+               <i class="fa fa-search" aria-hidden="true"></i> Tìm kiếm
+           </button>
+     </div>
+<!-- finish -->
+
+    </form></div>
+<script src="/scripts/moment-with-locales.js"></script>
+<script src="/scripts/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#btn-search-order').on('click', function (e) {
+            e.preventDefault();
+            var status = $('#tbcomplainsearch-status').val();
+            $('#complain-search-form').attr('action', "/danh-sach-khieu-nai"+(status ? '-'+status : '')).submit();
+        });
+
+    });
+</script>
+</div>
+    <!--view-->
+    <div class=" box don-hang-detail-inner ds-khieu-nai mt15 clearfix" style="margin-bottom: 120px;">
+        <div class="box-body">
+                        <div id="w1" class="grid-view"><table id="tbl_manager" class="table table-bordered table-hover dataTable"><thead>
+<tr><th>STT</th><th>Hình ảnh</th><th>Mã đơn hàng</th><th>Loại khiếu nại</th><th>Trạng thái khiếu nại</th><th>Ngày gửi</th><th>Thao tác</th></tr><tr id="w1-filters" class="filters"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+</thead>
+<tbody>
+<tr><td colspan="7"><div class="empty">No results found.</div></td></tr>
+</tbody></table><div class="pager-container"></div></div>        </div>
+    </div>
+</div>
+        </section>    </div>    <footer class="main-footer">        <div class="pull-right hidden-xs">            <b>Version</b> 2.3.0        </div>    </footer></div><!-- ./wrapper --><script>    $(function () {        main.init();        // Pace.js        /*$(document).ajaxStart(function() {            Pace.restart();        });*/         $(".select2").select2({            placeholder: function () {                $(this).data('placeholder');            },            allowClear: true        });         $('.btn-sm').on('click',function(){             if($(this).hasClass('active'))                return false;             $(this).addClass('active');                 $.ajax({                    url: '/update-sms',                    type: 'post',                    success: function (rs) {                        notify.success(rs.msg);                        $("#table-sms td.sms-status").each(function() {                            $(this).html("Đã xem");                        });                    }                });            return false;                 });    });</script><script src="/assets/39a68ee3/jquery.js"></script>
+<script src="/assets/116fe791/yii.js"></script>
+<script src="/assets/116fe791/yii.validation.js"></script>
+<script src="/assets/116fe791/yii.activeForm.js"></script>
+<script src="/assets/116fe791/yii.gridView.js"></script>
+<script src="/customer/js/system.js"></script>
+<script type="text/javascript">jQuery(document).ready(function () {
+jQuery('#complain-search-form').yiiActiveForm([{"id":"tbcomplainsearch-status","name":"status","container":".field-tbcomplainsearch-status","input":"#tbcomplainsearch-status","validate":function (attribute, value, messages, deferred, $form) {yii.validation.number(value, messages, {"pattern":/^\s*[+-]?\d+\s*$/,"message":"Trạng thái đơn khiếu nại must be an integer.","skipOnEmpty":1});}}], []);
+jQuery('#w1').yiiGridView({"filterUrl":"\/danh-sach-khieu-nai-1","filterSelector":"#w1-filters input, #w1-filters select"});
+});</script><!-- modal --><div id="myModal" class="fade modal in" role="dialog" tabindex="-1">    <div class="modal-dialog ">        <div class="modal-content">            <div class="modal-header">                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>                <h4 class="modal-title" id="myModalLabel">Thông báo</h4>            </div>            <div class="modal-body">                <div id="modal-content"></div>            </div>        </div>    </div></div><!-- Load Facebook SDK for JavaScript --><div id="fb-root"></div><script>  window.fbAsyncInit = function() {    FB.init({      xfbml            : true,      version          : 'v3.3'    });  };  (function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><!-- Your customer chat code --><div class="fb-customerchat"  attribution=setup_tool  page_id="151924652193929"  theme_color="#fa3c4c"  logged_in_greeting="Chào bạn! Chúng tôi có thể giúp gì cho bạn?"  logged_out_greeting="Chào bạn! Chúng tôi có thể giúp gì cho bạn?"></div></body></html>

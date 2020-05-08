@@ -1,0 +1,539 @@
+<!DOCTYPE html><html lang="en-US"><head>    <meta charset="UTF-8">    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">    <title>Giỏ hàng</title>    <meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta name="copyright" content="Dịch vụ đặt hàng | Taobao, Tmall, 1688 | Order hàng Trung Quốc - Nguonhang24h.vn">
+<link href="/customer/css/system.css?ver=2" rel="stylesheet">    <script src="/customer/plugins/jQuery/jQuery-2.1.4.min.js"></script>    <script>        var homeUrl = 'https://nguonhang24h.vn';        var uid = 3881;    </script></head><body class="skin-blue sidebar-mini wysihtml5-supported fixed"><div class="wrapper">    <header class="main-header">
+    <!-- Logo -->
+    <a href="/" target="_blank" class="logo" title="Trang chủ">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+
+        <span class="logo-mini"><b>HA</b>D</span>
+        <!-- logo for regular state and mobile devices -->
+<!--        <span class="logo-lg"><b>Admin</b>LTE</span>-->
+        <span class="logo-lg"><i class="fa fa-fw fa-truck"></i><b>Logistics</b></span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top" role="navigation">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+        </a>
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav" style="position: relative;">
+                <li class="info-box-number text-red">
+                    <a href="#">Tỷ giá: <b>3,399</b> CNY</a>
+                </li>                
+                <li class="tasks-menu cart-user" >
+                    <a href="/gio-hang" title="Giỏ hàng">
+                        <i class="fa fa-fw fa-shopping-cart"></i>
+                        <span class="label label-danger">1</span>
+                    </a>
+                </li>
+                <!-- Messages: style can be found in dropdown.less-->
+                <li class="dropdown messages-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="label label-success total-message">0</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">Bạn có <span class="total-message">0</span> tin nhắn</li>
+                        <li>
+                            <ul class="menu sub-messages">
+
+                            </ul>
+                        </li>
+                        <li class="footer"><a href="/dashboard">Tất cả</a></li>
+                    </ul>
+                </li>
+                <!-- Notifications: style can be found in dropdown.less -->
+                <!-- <li class="dropdown notifications-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-bell-o"></i>
+                        <span class="label label-warning total-message">0</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">Bạn có <span class="total-message">0</span> tin nhắn</li>
+                        <li>
+                            <ul class="menu sub-messages">
+                                
+                                
+                            </ul>
+                        </li>
+                        <li class="footer"><a href="/sms-all">Tất cả</a></li>
+                    </ul>
+                </li> -->
+                <!-- Control Sidebar Toggle Button -->
+                <li class="user user-menu">
+                    <a href="/logout"><i class="glyphicon glyphicon-log-out"></i> Thoát</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+</header>    <!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+            <div class="pull-left image">
+                https://nguonhang24h.vn/file/media/avatar/default_user_icon.png            </div>
+            <div class="pull-left info">
+                <p>langtuhoabinh</p>
+                <a><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+        </div>
+
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+            <li class="header vdt">
+                <div class="box-bank">
+                    <div class="text-center">
+                        <i class="fa fa-money" aria-hidden="true"></i>&nbsp;&nbsp;VĐT:&nbsp; <b class="text-red">0 <em>đ</em></b>
+                    </div>
+                </div>
+            </li>
+            <li class="header">CHỨC NĂNG</li>
+            <li class=" treeview menu-open">
+                <a href="/dashboard">
+                    <i class="fa fa-dashboard"></i> <span>Thông tin chung</span>
+                </a>
+            </li>
+            <li class="treeview  active">
+                <a href="#">
+                    <i class="fa fa-fw fa-truck"></i>
+                    <span>Đặt hàng</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="active" ><a href="/gio-hang"><i class="fa fa-cart-plus" aria-hidden="true"></i> Giỏ hàng</a></li>
+                    <li class="" ><a href="/dat-hang"><i class="fa fa-download" aria-hidden="true"></i> Tạo đơn hàng nhập</a></li>
+                </ul>
+            </li>
+
+            <li class="treeview ">
+                <a href="#">
+                    <i class="fa fa-files-o"></i> <span>Quản lý đơn hàng</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="">
+                        <a href="/don-hang"><i class="fa fa-fw fa-reorder" aria-hidden="true"></i>Tất cả đơn hàng <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></a>
+                    </li>
+                    <!--<li class="">
+                        <a href="/don-hang-7"><i class="fa fa-fw fa-hourglass-2"></i> Chờ báo giá <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title=" đơn"></span></span></a>
+                    </li>-->
+                    <li class="">
+                        <a href="/don-hang-1" ><i class="fa fa-fw fa-hand-lizard-o"></i>Chờ đặt cọc <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></span></a>
+                    </li>
+                    <li class="">
+                        <a href="/don-hang-2" ><i class="fa fa-fw fa-truck"></i>Đang đặt hàng <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></span></a></li>
+
+                    <li class="">
+                        <a href="/don-hang-3" ><i class="fa fa-fw fa-check-square-o"></i>Đã đặt hàng <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></span></a>
+                    </li>
+                    <li class="">
+                        <a href="/don-hang-4" ><i class="fa fa-fw fa-check"></i>Shop xưởng giao <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></a>
+                    </li>
+                    <li class="">
+                        <a href="/don-hang-8" ><i class="fa fa-fw fa-check"></i>Đang vận chuyển <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></a>
+                    </li>
+                    <li class="">
+                        <a href="/don-hang-9" ><i class="fa fa-fw fa-check"></i>Kho VN nhận <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></a>
+                    </li>
+                    <li class="">
+                        <a href="/don-hang-6" ><i class="fa fa-fw fa-mail-forward"></i>Đã trả hàng <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></a>
+                    </li>
+                    <li class="">
+                        <a href="/don-hang-5" ><i class="fa fa-fw fa-close"></i>Đã hủy <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview ">
+                <a href="/don-ki-gui">
+                    <i class="fa fa-fw fa-car"></i>
+                    <span>Đơn hàng ký gửi</span>
+                </a>
+            </li>
+            <li class="treeview ">
+                <a href="#">
+                    <i class="fa fa-fw fa-dollar"></i> <span>Ví điện tử</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/huong-dan-su-dung-vi-dien-tu-63"><i class="fa fa-fw fa-money" aria-hidden="true"></i>Hướng dẫn nạp tiền</a></li>
+                    <li class=""><a class=" " href="/lich-su-giao-dich"><i class="fa fa-fw fa-history" aria-hidden="true"></i>Lịch sử giao dịch</a></li>
+                    <li class=""><a class="" href="/rut-tien"><i class="fa fa-fw fa-hand-lizard-o" aria-hidden="true"></i>Rút tiền</a></li>
+                </ul>
+            </li>
+            <li class="treeview ">
+                <a href="#">
+                    <i class="fa fa-fw fa-warning"></i> <span>Đơn hàng khiếu nại</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="/danh-sach-khieu-nai" class="active "><i class="fa fa-fw fa-reorder" aria-hidden="true"></i> Tất cả
+                            <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/danh-sach-khieu-nai-1" class="active "><i class="fa fa-fw fa-hourglass-2" aria-hidden="true"></i> Chờ xử lý
+                            <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></a></li>
+                    <li>
+                        <a href="/danh-sach-khieu-nai-4" class="active "><i class="fa fa-fw fa-refresh" aria-hidden="true"></i> Đang xử lý
+                            <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></a></li>
+                    <li>
+                        <a href="/danh-sach-khieu-nai-2" class="active "><i class="fa fa-fw fa-check-square-o" aria-hidden="true"></i> Đã xử lý
+                            <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></a></li>
+                    <li>
+                        <a href="/danh-sach-khieu-nai-3" class="active "><i class="fa fa-fw fa-remove" aria-hidden="true"></i> Đã hủy
+                            <span data-toggle="tooltip" title="" class="badge bg-red" data-original-title="0 đơn">0</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview ">
+                <a href="#">
+                    <i class="fa fa-fw fa-user"></i> <span>Thông tin cá nhân</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                        <li><a href="/thong-tin-ca-nhan" class="active "><i class="fa fa-fw fa-user-secret" aria-hidden="true"></i>Thông tin cá nhân</a>
+                        </li>
+                        <!--<li>
+                                <a href="/thanh-vien/dia-chi-giao-hang" class="active "><i class="fa fa-user-circle-o" aria-hidden="true"></i>Địa chỉ giao hàng</a>
+                            </li>-->
+                        <li class="last">
+                            <a href="/thay-doi-mat-khau" class="active "><i class="fa fa-compass" aria-hidden="true"></i>Thay đổi mật khẩu</a>
+                        </li>
+                </ul>
+            </li>
+                        <li class="info-box-number text-red">
+                <a style="color: #fff" href="#"><i class="fa fa-fw fa-dollar"></i> Tỷ giá: <b>3,399</b> CNY</a>
+            </li>
+            <li class="info-box-number text-red">
+                <a style="color: #fff" href="#"><i class="fa fa-fw fa-phone"></i> Hà Nội: <b>0931.45.1688</b></a>
+            </li>
+            <li class="info-box-number text-red">
+                <a style="color: #fff" href="#"><i class="fa fa-fw fa-phone"></i> Hồ Chí Minh: <b>0932.45.1688</b></a>
+            </li>
+            <li class="info-box-number text-red">
+                <a style="color: #fff" href="#"><i class="fa fa-fw fa-phone"></i> Chăm sóc KH: <b>091.190.1688</b></a>
+            </li>
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>    <div class="content-wrapper">        <section class="content-header">                <ul class="breadcrumb"><li><a href="/">Home</a></li>
+<li class="active">Giỏ hàng</li>
+</ul>        </section>        <!-- Main content -->        <section class="content pt0">                <!--<script src="../js/jquery.validate.min.js"></script>-->
+
+<div class="row clearfix">
+    <div class="box-body">
+        <div class="pd10 total-price box clearfix text-right">
+            <div class="pull-left">
+                <div class="delete-all" style="line-height: 50px;">
+                    <label class="checkbox icheck">
+                        <label>
+                            <input class="btn-check-all" type="checkbox"/> <b>Chọn tất cả</b>
+                        </label>
+                    </label>
+                </div><!-- end .delete-all-->
+            </div>
+            <div class="pull-right">
+                <ul class="list-inline">
+                    <li>Tổng số shop: <span class="number-pr text-bold totalShopAll">1</span></li>
+                    <li>Tổng số sản phẩm :
+                        <span class="number-pr text-bold totalQuantityAll">2</span></li>
+                    <li>Tổng tiền tệ :
+                        <span class="number-pr text-bold totalFinalTQAmountAll">478</span>¥
+                    </li>
+                    <li>Tổng tiền :
+                        <span class="number-pr text-bold price totalFinalAmountAll">1,624,722</span>đ
+                    </li>
+                    <li>
+                        <button  type="button" class="btn-submit-all btn btn-lg btn-danger" style="min-width: 200px;margin-left: 15px;">
+                          <span class="glyphicon glyphicon-shopping-cart"></span>  Đặt tất cả
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+                                            <form action="/gio-hang" method="post" class="frm-order don-hang-gio-hang-add-form"
+                          id="cart-add-form-1" accept-charset="UTF-8">
+                        <div class="box shop-item clearfix" data-shop_id="57301243">
+                            <div class="box-header">
+                                <h3 class="box-title shop-title">
+                                    <label class="checkbox icheck">
+                                        <label>
+                                            <input class="shop-check-all" id="ckb_shop_1" name="shop_cart_item[57301243][checked]" type="checkbox" checked >
+                                            Shop: Cửa hàng hàng đầu Inman                                        </label>
+                                    </label>
+                                </h3>
+                                <div class="box-tools pull-right ">
+                                    <a data-toggle="tooltip" data-original-title="Xóa shop" data-shop="57301243" class="shop_cart_delete delete-shop btn " href="javascript:void(0);">
+                                        <i style="color: red;font-size: 20px;" class="fa fa-trash-o" aria-hidden="true"></i>
+                                        Xóa shop
+                                    </a>
+                                    <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                                            title="Chi tiết">
+                                        <i class="fa fa-minus"></i></button>
+                                </div>
+                            </div>
+                            <div class="box-body pd0 ">
+                                <div class="cart-content">
+                                    <div class="col-sm-8">
+                                        <div class="box list-product">
+                                            <table class="data-item table table-striped table-hover table-bordered">
+                                                <thead>
+                                                <tr class="text-center">
+                                                    <th class="text-center" width="1%">
+                                                    </th>
+                                                    <th width="42%">Sản phẩm</th>
+                                                    <th width="15%" class="text-center">Số lượng</th>
+                                                    <th width="20%" class="text-center">Giá (¥)</th>
+                                                    <th width="20%" class="text-center">Thành tiền (¥)</th>
+                                                    <th width="10%" class="text-center">#</th>
+                                                </tr>
+                                                </thead>
+                                            </table>
+                                                                                                <div class="data-item">
+                                                        <table class="table table-striped table-hover table-bordered">
+                                                            <tbody>
+                                                            <tr data-shop_id="57301243" class="row-shop odd">
+                                                                <td width="1%" align="center" class="first-checkbox">
+                                                                    <div class="checkbox mgt0">
+                                                                        <input checked  data-shopid="57301243" data-pid="458009"
+                                                                               id="shop-cart-item-458009-product-check"
+                                                                               type="checkbox"
+                                                                               name="shop_cart_item[57301243][item][458009][product_check]"
+                                                                               value="1" class="form-checkbox check-item">
+                                                                        <label for="shop-cart-item-458009-product-check"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td width="42%">
+                                                                    <div class="pull-left mr10 mb10 san-pham-item-image">
+                                                                        <div class="image">
+                                                                            <a href="//img.alicdn.com/imgextra/i1/130974249/TB27X7luborBKNjSZFjXXc_SpXa_!!130974249.jpg_430x430q90.jpg"
+                                                                               target="_blank"><img width="50" height="50"
+                                                                                                    src="//img.alicdn.com/imgextra/i1/130974249/TB27X7luborBKNjSZFjXXc_SpXa_!!130974249.jpg_430x430q90.jpg"></a>
+                                                                            <div class="image-hover">
+                                                                                <img width="300px"
+                                                                                     src="//img.alicdn.com/imgextra/i1/130974249/TB27X7luborBKNjSZFjXXc_SpXa_!!130974249.jpg_430x430q90.jpg">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="media-heading">
+                                                                        <a target="_bank" href="https://detail.tmall.com/item.htm?id=565906554162">Inman mùa hè váy mới...</a>
+                                                                    </div>
+                                                                    <div class="media-heading">
+                                                                        Kích thước:
+                                                                        <span class="text-success"><b>S</b></span>
+                                                                    </div>
+                                                                    <div class="media-heading">
+                                                                        Màu sắc:
+                                                                        <span class="text-success"><b>Xanh đậm-</b></span>
+                                                                    </div>
+                                                                </td>
+                                                                <td width="15%" valign="top" class="calculate text-center">
+                                                                    <div class="input-quantity" data-toggle="tooltip" data-original-title="Nhập số lượng bạn muốn mua">
+                                                                        <input  onblur="main.cart_update(458009,'57301243')"
+                                                                               name="shop_cart_item[57301243][item][458009][qty]"
+                                                                               type="number" min="1" max="50000" value="2" class="choose-quantity qty-item-458009">
+
+                                                                        <span class="up_num" data-shopid="57301243" data-pid="458009" title="Nhấn lên để cập nhật số lượng"></span>
+                                                                        <span class="down_num" data-shopid="57301243" data-pid="458009" title="Nhấn xuống để cập nhật số lượng"></span>
+                                                                    </div>
+
+                                                                </td>
+                                                                <td width="20%" class="text-center" data-th="Giá">
+                                                                    <div class="media-heading te china-unit-458009"
+                                                                         data="239">
+                                                                        <b class="">239</b>
+                                                                    </div>
+                                                                    <div class=" media-heading vnd-unit vnd-unit-458009"
+                                                                         data="812361">
+                                                                        <b>812,361</b>
+                                                                    </div>
+                                                                </td>
+                                                                <td width="20%" class="text-center thanh-tien" data-th="Thành tiền">
+                                                                    <div class="clear media-heading china-unit-total china-unit-total-458009"
+                                                                         data-te="478">
+                                                                        <b>478</b>
+                                                                    </div>
+                                                                    <div class="media-heading vnd-unit vnd-unit-total vnd-unit-total-458009"
+                                                                         data-vnd="1624722">
+                                                                        <b>1,624,722</b>
+                                                                    </div>
+                                                                </td>
+                                                                <td width="10%" class="text-center">
+
+                                                                    <a data-id="458009" class="cart-delete-item delete btn-actions" data-toggle="tooltip" data-original-title="Xóa"
+                                                                       href="javascript:void(0);" title="Xóa">
+                                                                        <span class="btn bg-orange btn-xs"><i class="fa fa-trash"></i> Xóa</span>
+                                                                    </a>
+
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td></td>
+                                                                <td colspan="5">
+                                                                    <textarea  onblur="main.cart_update(458009,'57301243')" class="desc-458009 form-control border-none" name="shop_cart_item[57301243][item][458009][ghi_chu]" rows="1" placeholder="Ghi chú cho sản phẩm" style=""></textarea>
+                                                                    <div class="module-float line-bottom"></div>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 box-money">
+                                        <div class="box thanh-tien shop-tong-stt-57301243 ">
+                                            <div class="box-calculate text-right">
+                                                <div class="clearfix">
+                                                    <label class="col-sm-4 text-right">Số lượng:</label>
+                                                    <label class="col-sm-8 text-bold">
+                                                        <b class="qty">2</b>
+                                                    </label>
+                                                </div>
+                                                <div class="clearfix">
+                                                    <label class="col-sm-4 text-right">Phí kiểm đếm:</label>
+                                                    <label class="col-sm-8 text-bold">
+                                                        <b class="vnd-unit">0</b> đ
+                                                    </label>
+                                                </div>
+                                                <div class="clearfix">
+                                                    <label class="col-sm-4 text-right">Phí đóng gỗ:</label>
+                                                    <label class="col-sm-8 text-bold">
+                                                        <b class="vnd-unit">0</b> đ
+                                                    </label>
+                                                </div>
+                                                <div class="clearfix">
+                                                    <label class="col-sm-4 text-right">Tổng Tiền:</label>
+                                                    <label class="col-sm-8 text-bold">
+                                                        <b class="tt-te">478</b><em>¥</em>  = <b class="vnd-unit tt-vn">1,624,722</b> đ
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="box-body">
+                                                <div class="text-right">
+                                                    <div class="form-group clearfix">
+                                                        <label class="col-sm-4">Kho đích: </label>
+                                                        <div class="col-sm-8 pd0">
+                                                            <select id="provinceID-1" class=" required form-control" name="provinceID" data-placeholder="Chọn kho đích..">
+<option value="">Chọn kho đích</option>
+<option value="1" selected>HN NHANH</option>
+<option value="2">HCM NHANH</option>
+<option value="3">HCM THƯỜNG</option>
+<option value="4">HN THƯỜNG</option>
+<option value="5">ĐÔNG HƯNG-HN</option>
+<option value="6">ĐÔNG HƯNG-HCM</option>
+</select>                                                        </div>
+                                                    </div>
+                                                    <div class="form-group clearfix">
+                                                        <label class="col-sm-4">Địa chỉ: </label>
+                                                        <div class="col-sm-8 pd0">
+                                                            <input type="text" name="shipAddress"
+                                                                   value="cưqdw"
+                                                                   id="shipAddress-1"
+                                                                   placeholder="Địa chỉ giao hàng"
+                                                                   maxlength="128"
+                                                                   class="form-control required">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group clearfix">
+                                                        <label class="col-sm-4">Ghi chú: </label>
+                                                        <div class="col-sm-8 pd0">
+                                                            <textarea class="form-control" style="margin-bottom: 10px" rows="2"
+                                                                      placeholder="Ghi chú đơn hàng"
+                                                                      name="ghi_chu"  id="ghi_chu-1"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group clearfix text-right box-count">
+                                                        <label class="checkbox icheck">
+                                                            <label>
+                                                                <input type="checkbox" value="1" name="isBad">
+                                                                Hàng dễ vỡ
+                                                            </label>
+                                                        </label>
+                                                        <label class="checkbox icheck">
+                                                            <label>
+                                                                <input type="checkbox" value="1" name="isBox">
+                                                                Đóng gỗ
+                                                            </label>
+                                                        </label>
+                                                        <label class="checkbox icheck">
+                                                            <label>
+                                                                <input type="checkbox" value="1" name="isCheck">
+                                                                Kiểm đếm
+                                                            </label>
+                                                        </label>
+                                                    </div>
+                                                                                                            <div class=" text-left">
+                                                            <label>Lưu ý:</label><br>
+                                                            <div style="margin: 10px 0;padding: 10px;text-align: justify;border: 1px solid #CCCCCC;color:#ff0000">
+                                                                <p><strong>- Để tiết kiệm chi ph&iacute; vận chuyển Qu&yacute; Kh&aacute;ch c&oacute; thể chọn tại mục kho đ&iacute;ch, chọn Tiết Kiệm + kho tương ứng (Chỉ &aacute;p dụng cho đơn tr&ecirc;n 3kg)</strong></p>
+<p><strong>- Đối với c&aacute;c loại h&agrave;ng ho&aacute; dễ vỡ, m&oacute;p m&eacute;o qu&yacute; kh&aacute;ch vui l&ograve;ng t&iacute;ch chọn H&agrave;ng dễ vỡ v&agrave; Đ&oacute;ng kiện gỗ để đảm bảo h&agrave;ng ho&aacute; được an to&agrave;n hơn trong qu&aacute; tr&igrave;nh vận chuyển</strong></p>                                                            </div>
+                                                        </div>
+                                                                                                    </div>
+
+                                                <!-- <input class="pull-left form-control" style="width: 50%" placeholder="Ghi chú shop" name="shop_cart_item[57301243][ghi_chu]" type="text" />        -->
+
+                                            </div>
+                                            <div class="module-float line-bottom" style="margin: 10px 0"></div>
+
+
+                                        </div>
+                                        <div class="pull-right mb15">
+                                            <button  class="btn btn-danger btnSendBuyNow">
+                                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                                                Đặt hàng
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                </div>
+</div>
+<span class="ti-gia" style="display:none;">3399</span>
+<script>
+
+    $(document).ready(function () {
+
+        users.validQuantity("input.item-qty");
+      //  main.init();
+
+        $('.btnSendBuyNow').on('click', function () {
+            var form = $(this).closest('form.frm-order');
+            form.validate({
+                onfocusout: function (e) {
+                    this.element(e);
+                }
+            });
+        });
+
+
+        jQuery.extend(jQuery.validator.messages, {
+            required: "Trường này là bắt buộc",
+            remote: "Please fix this field.",
+            email: "Please enter a valid email address.",
+            url: "Please enter a valid URL.",
+            date: "Please enter a valid date.",
+            dateISO: "Please enter a valid date (ISO).",
+            number: "Vui lòng nhập một số điện thoại hợp lệ.",
+            digits: "Please enter only digits.",
+            creditcard: "Please enter a valid credit card number.",
+            equalTo: "Please enter the same value again.",
+            accept: "Please enter a value with a valid extension.",
+            maxlength: jQuery.validator.format("Please enter no more than {0} characters."),
+            minlength: jQuery.validator.format("Please enter at least {0} characters."),
+            rangelength: jQuery.validator.format("Please enter a value between {0} and {1} characters long."),
+            range: jQuery.validator.format("Please enter a value between {0} and {1}."),
+            max: jQuery.validator.format("Please enter a value less than or equal to {0}."),
+            min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
+        });
+    });
+</script>
+        </section>    </div>    <footer class="main-footer">        <div class="pull-right hidden-xs">            <b>Version</b> 2.3.0        </div>    </footer></div><!-- ./wrapper --><script>    $(function () {        main.init();        // Pace.js        /*$(document).ajaxStart(function() {            Pace.restart();        });*/         $(".select2").select2({            placeholder: function () {                $(this).data('placeholder');            },            allowClear: true        });         $('.btn-sm').on('click',function(){             if($(this).hasClass('active'))                return false;             $(this).addClass('active');                 $.ajax({                    url: '/update-sms',                    type: 'post',                    success: function (rs) {                        notify.success(rs.msg);                        $("#table-sms td.sms-status").each(function() {                            $(this).html("Đã xem");                        });                    }                });            return false;                 });    });</script><script src="/customer/js/system.js"></script><!-- modal --><div id="myModal" class="fade modal in" role="dialog" tabindex="-1">    <div class="modal-dialog ">        <div class="modal-content">            <div class="modal-header">                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>                <h4 class="modal-title" id="myModalLabel">Thông báo</h4>            </div>            <div class="modal-body">                <div id="modal-content"></div>            </div>        </div>    </div></div><!-- Load Facebook SDK for JavaScript --><div id="fb-root"></div><script>  window.fbAsyncInit = function() {    FB.init({      xfbml            : true,      version          : 'v3.3'    });  };  (function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><!-- Your customer chat code --><div class="fb-customerchat"  attribution=setup_tool  page_id="151924652193929"  theme_color="#fa3c4c"  logged_in_greeting="Chào bạn! Chúng tôi có thể giúp gì cho bạn?"  logged_out_greeting="Chào bạn! Chúng tôi có thể giúp gì cho bạn?"></div></body></html>
