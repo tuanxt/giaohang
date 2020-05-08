@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Danh sách bao</title>
+    <link href="/assets/d0461e8f/css/bootstrap.css" rel="stylesheet">
+<link href="/assets/95c3371/css/kv-grid-expand.min.css" rel="stylesheet">
+<link href="/assets/95c3371/css/kv-grid.min.css" rel="stylesheet">
+<link href="/assets/298354ee/dist/css/bootstrap-dialog.min.css" rel="stylesheet">
+<link href="/assets/95c3371/css/jquery.resizableColumns.min.css" rel="stylesheet">
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="/plugins/select2/select2.css" rel="stylesheet">
+<link href="/plugins/iCheck/minimal/blue.css" rel="stylesheet">
+<link href="/plugins/datepicker/datepicker3.css" rel="stylesheet">
+<link href="/css/skins/_all-skins.min.css" rel="stylesheet">
+<link href="/css/bootstrap-toggle.css" rel="stylesheet">
+<link href="/css/layout.css" rel="stylesheet">
+<style>.bootstrap-dialog .modal-header.bootstrap-dialog-draggable{cursor:move}</style>
+<script src="/assets/1472305f/js/dialog.min.js"></script>
+<script type="text/javascript">var kvExpandRow_ae19b71c = {"gridId":"w1","hiddenFromExport":true,"detailUrl":"/bag/detail","onDetailLoaded":"","expandIcon":"<span class=\"glyphicon glyphicon-expand\"></span>","collapseIcon":"<span class=\"glyphicon glyphicon-collapse-down\"></span>","expandTitle":"Expand","collapseTitle":"Collapse","expandAllTitle":"Expand All","collapseAllTitle":"Collapse All","rowCssClass":"info","animationDuration":"slow","expandOneOnly":true,"enableRowClick":false,"enableCache":true,"rowClickExcludedTags":["A","BUTTON","INPUT"],"collapseAll":false,"expandAll":false,"extraData":[]};
+
+var krajeeDialogDefaults_71c625b2 = {"alert":{"type":"type-info","title":"Information","buttonLabel":"<span class=\"glyphicon glyphicon-ok\"></span> Ok"},"confirm":{"type":"type-warning","title":"Confirmation","btnOKClass":"btn-warning","btnOKLabel":"<span class=\"glyphicon glyphicon-ok\"></span> Ok","btnCancelLabel":"<span class=\"glyphicon glyphicon-ban-circle\"></span> Cancel"},"prompt":{"draggable":false,"title":"Information","buttons":[{"label":"Cancel","icon":"glyphicon glyphicon-ban-circle"},{"label":"Ok","icon":"glyphicon glyphicon-ok","cssClass":"btn-primary"}],"closable":false},"dialog":{"draggable":true,"title":"Information","buttons":[{"label":"Cancel","icon":"glyphicon glyphicon-ban-circle"},{"label":"Ok","icon":"glyphicon glyphicon-ok","cssClass":"btn-primary"}]}};
+var krajeeDialog_6d7f2d25 = {"id":"w2"};
+var krajeeDialog=new KrajeeDialog(true,krajeeDialog_6d7f2d25,krajeeDialogDefaults_71c625b2);
+var kvGridExp_7297d68d={"gridId":"w1","target":"_blank","messages":{"allowPopups":"Disable any popup blockers in your browser to ensure proper download.","confirmDownload":"Ok to proceed?","downloadProgress":"Generating the export file. Please wait...","downloadComplete":"Request submitted! You may safely close this dialog after saving your downloaded file."},"exportConversions":[{"from":"<span class=\"glyphicon glyphicon-ok text-success\"></span>","to":"Active"},{"from":"<span class=\"glyphicon glyphicon-remove text-danger\"></span>","to":"Inactive"}],"showConfirmAlert":true};
+var kvGridExp_12735912={"filename":"grid-export","showHeader":true,"showPageSummary":true,"showFooter":true};
+var kvGridExp_7a901532={"dialogLib":"krajeeDialog","gridOpts":kvGridExp_7297d68d,"genOpts":kvGridExp_12735912,"alertMsg":"The HTML export file will be generated for download.","config":{"cssFile":"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"}};
+var kvGridExp_37469a5f={"dialogLib":"krajeeDialog","gridOpts":kvGridExp_7297d68d,"genOpts":kvGridExp_12735912,"alertMsg":"The CSV export file will be generated for download.","config":{"colDelimiter":",","rowDelimiter":"\r\n"}};
+var kvGridExp_48e43ab1={"dialogLib":"krajeeDialog","gridOpts":kvGridExp_7297d68d,"genOpts":kvGridExp_12735912,"alertMsg":"The TEXT export file will be generated for download.","config":{"colDelimiter":"\t","rowDelimiter":"\r\n"}};
+var kvGridExp_648bbf49={"dialogLib":"krajeeDialog","gridOpts":kvGridExp_7297d68d,"genOpts":kvGridExp_12735912,"alertMsg":"The EXCEL export file will be generated for download.","config":{"worksheet":"ExportWorksheet","cssFile":""}};
+var kvGridExp_5caf8e1e={"dialogLib":"krajeeDialog","gridOpts":kvGridExp_7297d68d,"genOpts":kvGridExp_12735912,"alertMsg":"The JSON export file will be generated for download.","config":{"colHeads":[],"slugColHeads":false,"jsonReplacer":function(k,v){return typeof(v)==='string'?$.trim(v):v},"indentSpace":4}};</script>      <script>
+          var homeUrl = 'https://nguonhang24h.vn';
+          var baseUrl = 'http://cms.nguonhang24h.vn';
+      </script>
+      <script src="/js/jQuery-2.1.4.min.js"></script>
+      <script src="/bootstrap/js/bootstrap.js"></script>
+      <script src="/js/main.js"></script>
+  </head>
+  <body class="skin-blue sidebar-mini wysihtml5-supported">
+           <div class="wrapper">
+        <header class="main-header">
+    <!-- Logo -->
+    <a href="/" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>H</b>S</span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><b>HS</b> PANEL</span>
+    </a>
+
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top" role="navigation">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+        </a>
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <li class="dropdown messages-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="label label-success">4</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">You have 4 messages</li>
+                        <li>
+                            <!-- inner menu: contains the actual data -->
+                            <ul class="menu">
+                                <li><!-- start message -->
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="/images/admin.png" class="img-circle" alt="User Image">
+                                        </div>
+                                        <h4>
+                                            Support Team
+                                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                        </h4>
+                                        <p>Why not buy a new awesome theme?</p>
+                                    </a>
+                                </li>
+                                <!-- end message -->
+                                <li>
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="/images/admin.png" class="img-circle" alt="User Image">
+                                        </div>
+                                        <h4>
+                                            AdminLTE Design Team
+                                            <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                                        </h4>
+                                        <p>Why not buy a new awesome theme?</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="/images/admin.png" class="img-circle" alt="User Image">
+                                        </div>
+                                        <h4>
+                                            Developers
+                                            <small><i class="fa fa-clock-o"></i> Today</small>
+                                        </h4>
+                                        <p>Why not buy a new awesome theme?</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="/images/admin.png" class="img-circle" alt="User Image">
+                                        </div>
+                                        <h4>
+                                            Sales Department
+                                            <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                                        </h4>
+                                        <p>Why not buy a new awesome theme?</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="/images/admin.png" class="img-circle" alt="User Image">
+                                        </div>
+                                        <h4>
+                                            Reviewers
+                                            <small><i class="fa fa-clock-o"></i> 2 days</small>
+                                        </h4>
+                                        <p>Why not buy a new awesome theme?</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer"><a href="#">See All Messages</a></li>
+                    </ul>
+                </li>
+                <!-- Notifications: style can be found in dropdown.less -->
+                <li class="dropdown notifications-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-bell-o"></i>
+                        <span class="label label-warning">10</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">You have 10 notifications</li>
+                        <li>
+                            <!-- inner menu: contains the actual data -->
+                            <ul class="menu">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
+                                        page and may cause design problems
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-users text-red"></i> 5 new members joined
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-user text-red"></i> You changed your username
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer"><a href="#">View all</a></li>
+                    </ul>
+                </li>
+
+
+                                    <li><a target="_blank" href="https://nguonhang24h.vn" class="pull-left"><i class="glyphicon glyphicon-home"></i> Open site</a>  </li>
+                    <li>
+                        <a href="/sign/out"><i class="glyphicon glyphicon-log-out"></i> Logout</a>
+                    </li>
+                            </ul>
+        </div>
+
+    </nav>
+</header>        <!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="/images/admin.png" class="img-circle" alt="">
+            </div>
+            <div class="pull-left info">
+                <p>adminkhovn</p>
+                <a href="javascript:void(0)"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+        </div>
+        <ul class="sidebar-menu">
+            <li class="header">MAIN NAVIGATION</li>
+            <li class="">
+                <a href="/"> <i class="fa fa-dashboard"></i>
+                    <span>Dashboard</span> <!--<i class="fa fa-angle-left pull-right"></i>-->
+                </a>
+            </li>
+                                                <li class="treeview ">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>                            <span> Quản lý đơn hàng</span>
+                                                            <i class="fa fa-angle-left pull-right"></i>
+                                                    </a>
+                                                    <ul class="treeview-menu ">
+                                                                    <li class="">
+                                        <a href="/orders/index">
+                                            <i class="fa fa-circle-o"></i>                                            Tất cả đơn hàng                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                            </ul>
+                                            </li>
+                                    <li class="treeview active">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>                            <span> Quản lý kho</span>
+                                                            <i class="fa fa-angle-left pull-right"></i>
+                                                    </a>
+                                                    <ul class="treeview-menu menu-open">
+                                                                    <li class="">
+                                        <a href="/shipping/barcode">
+                                            <i class="fa fa-money" aria-hidden="true"></i>                                            Kho nhập mã vận đơn                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                                    <li class="">
+                                        <a href="/lo/index">
+                                            <i aria-hidden="true" class="glyphicon glyphicon-file"></i>                                            QL Phiếu xuất kho                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                                    <li class="1">
+                                        <a href="/bag/index">
+                                            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>                                            Quản lý bao                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                                    <li class="">
+                                        <a href="/transfercode/index">
+                                            <i aria-hidden="true" class="glyphicon glyphicon-file"></i>                                            Quản lý mã vận đơn                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                            </ul>
+                                            </li>
+                                    <li class="treeview ">
+                        <a href="/history/index">
+                            <i class="fa fa-history" aria-hidden="true"></i>                            <span> Lịch sử người dùng</span>
+                                                    </a>
+                                            </li>
+                                    <li class="treeview ">
+                        <a href="javascript:void(0)">
+                            <i aria-hidden="true" class="glyphicon glyphicon-user"></i>                            <span> Thông tin tài khoản</span>
+                                                            <i class="fa fa-angle-left pull-right"></i>
+                                                    </a>
+                                                    <ul class="treeview-menu ">
+                                                                    <li class="">
+                                        <a href="/user/my-profile">
+                                            <i aria-hidden="true" class="glyphicon glyphicon-lock"></i>                                            Hồ sơ                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                                    <li class="">
+                                        <a href="/user/change-password">
+                                            <i aria-hidden="true" class="glyphicon glyphicon-lock"></i>                                            Thay đổi mật khẩu                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                            </ul>
+                                            </li>
+                        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>        <div class="content-wrapper">
+            <section class="content-header">
+                <ol class="breadcrumb"><li><a href="/">Home</a></li>
+<li class="active">Danh sách bao</li>
+</ol>            </section>
+            <section class="content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="bag-index">
+
+    <h1>Danh sách bao</h1>
+    
+<div class="bag-search">
+
+        <div class="tb-orders-search">
+            <form id="w0" action="/bag/index" method="get">
+            <div class="form-text ext-full">
+                <div class="form-group field-startDate">
+<div class="input-group"><div class="input-group-addon"><i class="fa fa-calendar"></i> </div><input type="text" id="startDate" class="form-control" name="BagSearch[startDate]" placeholder="Từ ngày" autocomplete="off"></div>
+</div>            </div>
+            <div class="form-text ext-full">
+                <div class="form-group field-endDate">
+<div class="input-group"><div class="input-group-addon"><i class="fa fa-calendar"></i> </div><input type="text" id="endDate" class="form-control" name="BagSearch[endDate]" placeholder="Đến ngày" autocomplete="off"></div>
+</div>            </div>
+            <div class="form-text ext-full">
+                <div class="form-group field-bagsearch-status">
+
+<select id="bagsearch-status" class="form-control select2" name="BagSearch[status]" style="width:100%" data-placeholder="Trạng thái">
+<option value=""></option>
+<option value="1">Chờ xử lý</option>
+<option value="2">Đã đóng bao</option>
+</select>
+
+<div class="help-block"></div>
+</div>            </div>
+
+            <div class="form-text ext-full">
+                <button type="submit" id="btn-search-order" name="op" value="Tìm kiếm" class="btn btn-primary">
+                    <i class="fa fa-search" aria-hidden="true"></i> Tìm kiếm
+                </button>
+            </div>
+            <div class="pull-right">
+                <a class="btn btn-success btn-sm" href="/bag/create" target="_blank">Tạo bao</a>            </div>
+            </form>        </div>
+
+</div>
+
+    <div class="lo-index clear">
+        <br>
+        <div class="clear mt15"></div>
+        <div id="w1-pjax" data-pjax-container="" data-pjax-push-state data-pjax-timeout="1000"><div class="kv-loader-overlay"><div class="kv-loader"></div></div><div id="w1" class="grid-view hide-resize" data-krajee-grid="kvGridInit_4d364a73"><div class="panel panel-primary">
+    <div class="panel-heading">    <div class="pull-right">
+        <div class="summary">Showing <b>1-4</b> of <b>4</b> items.</div>
+    </div>
+    <h3 class="panel-title">
+        <h3 class="panel-title"><i class="fa fa-cart-arrow-down"></i> Danh sách bao</h3>
+    </h3>
+    <div class="clearfix"></div></div>
+    <div class="kv-panel-before">    <div class="btn-toolbar kv-grid-toolbar toolbar-container pull-right"><div class="btn-group"><a class="btn btn-default" href="/lo/index" title="Reset Grid"><i class="glyphicon glyphicon-repeat"></i></a></div>
+<div class="btn-group">
+<button id="w3" class="btn btn-default dropdown-toggle" title="Export" data-toggle="dropdown"><i class='glyphicon glyphicon-export'></i>  <span class="caret"></span></button>
+
+<ul id="w4" class="dropdown-menu dropdown-menu-right"><li role="presentation" class="dropdown-header">Export Page Data</li>
+<li title="Hyper Text Markup Language"><a class="export-html" href="#" data-mime="text/html" data-hash="082b641e646070bcadb21f9c9c6e1a2d12f4daa6bb5d0aece087f62c2fb1a74bgridviewgrid-exporttext/htmlutf-81{&quot;cssFile&quot;:&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css&quot;}" tabindex="-1"><i class="text-info glyphicon glyphicon-floppy-saved"></i> HTML</a></li>
+<li title="Comma Separated Values"><a class="export-csv" href="#" data-mime="application/csv" data-hash="15ef2cd69d0515cc9988bb2446872886a2261cc67d06f233141401dcd1a93f60gridviewgrid-exportapplication/csvutf-81{&quot;colDelimiter&quot;:&quot;,&quot;,&quot;rowDelimiter&quot;:&quot;\r\n&quot;}" tabindex="-1"><i class="text-primary glyphicon glyphicon-floppy-open"></i> CSV</a></li>
+<li title="Tab Delimited Text"><a class="export-txt" href="#" data-mime="text/plain" data-hash="243150e9c36897f2d965adfbf4be7da97fc53b838ca041cd7869d8521cdf74f0gridviewgrid-exporttext/plainutf-81{&quot;colDelimiter&quot;:&quot;\t&quot;,&quot;rowDelimiter&quot;:&quot;\r\n&quot;}" tabindex="-1"><i class="text-muted glyphicon glyphicon-floppy-save"></i> Text</a></li>
+<li title="Microsoft Excel 95+"><a class="export-xls" href="#" data-mime="application/vnd.ms-excel" data-hash="a9a9527b2718539a71839627f928e66bfeaa9709432094d1a7755940d3274ce8gridviewgrid-exportapplication/vnd.ms-excelutf-81{&quot;worksheet&quot;:&quot;ExportWorksheet&quot;,&quot;cssFile&quot;:&quot;&quot;}" tabindex="-1"><i class="text-success glyphicon glyphicon-floppy-remove"></i> Excel</a></li>
+<li title="JavaScript Object Notation"><a class="export-json" href="#" data-mime="application/json" data-hash="1c3c3f9d4fe9e1d724a463a67fa79e562443e7b28a0c130c853e2f2d7b9ee7adgridviewgrid-exportapplication/jsonutf-81{&quot;colHeads&quot;:[],&quot;slugColHeads&quot;:false,&quot;indentSpace&quot;:4}" tabindex="-1"><i class="text-warning glyphicon glyphicon-floppy-open"></i> JSON</a></li></ul>
+</div><form class="kv-export-form" action="/gridview/export/download" method="post" style="display:none" target="kvDownloadDialog">
+<input type="hidden" name="_csrf" value="3L81o09colalLeZajDCzWEvH4CQ78PM4F7VOrlYJNARxq2C4zmd2Emq0FuuYkspei1X7LmLDxyzzK9WwQsxqkg==">
+<input type="hidden" name="module_id" value="gridview">
+<input type="hidden" name="export_hash">
+<input type="hidden" name="export_filetype">
+<input type="hidden" name="export_filename">
+<input type="hidden" name="export_mime">
+<input type="hidden" name="export_config">
+<input type="hidden" name="export_encoding" value="utf-8">
+<input type="hidden" name="export_bom" value="1">
+<textarea name="export_content"></textarea>
+</form></div>
+    
+    <div class="clearfix"></div></div>
+    <div id="w1-container" class="kv-grid-container"><table id="tbl_manager" class="table table-bordered table-hover dataTable kv-grid-table table-striped kv-table-wrap"><colgroup><col class="skip-export">
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col></colgroup>
+<thead>
+
+<tr><th class="kartik-sheet-style kv-align-center kv-align-middle skip-export kv-expand-header-cell kv-batch-toggle kv-merged-header" title="Expand All" style="width:50px;" rowspan="2" data-col-seq="0"><div class='kv-expand-header-icon kv-state-collapsed'><span class="glyphicon glyphicon-expand"></span></div></th><th data-col-seq="1"><a href="/bag/index?sort=id" data-sort="id">Mã bao</a></th><th data-col-seq="2"><a href="/bag/index?sort=userID" data-sort="userID">Nhân viên xử lý</a></th><th data-col-seq="3"><a href="/bag/index?sort=kg" data-sort="kg">Cân nặng</a></th><th data-col-seq="4"><a href="/bag/index?sort=kgChange" data-sort="kgChange">Cân nặng quy đổi</a></th><th data-col-seq="5"><a href="/bag/index?sort=kgPay" data-sort="kgPay">Cân nặng tính tiền</a></th><th data-col-seq="6"><a href="/bag/index?sort=m3" data-sort="m3">Khối tính tiền</a></th><th data-col-seq="7"><a href="/bag/index?sort=createDate" data-sort="createDate">Ngày tạo</a></th><th class="text-center" data-col-seq="8"><a href="/bag/index?sort=status" data-sort="status">Trạng thái</a></th><th class="text-right" style="min-width: 10%;" data-col-seq="9">Thao tác</th></tr><tr id="w1-filters" class="filters skip-export"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+</thead>
+<tbody>
+<tr data-key="1"><td class="skip-export kv-align-center kv-align-middle kv-expand-icon-cell" title="Expand" data-th="Xem chi tiết" style="width:50px;" data-col-seq="0">        <div class="kv-expand-row w1">
+            <div class="kv-expand-icon kv-state-expanded w1"><span class="glyphicon glyphicon-expand"></span></div>
+            <div class="kv-expand-detail skip-export w1" style="display:none;">
+                <div class="skip-export kv-expanded-row w1" data-index="0" data-key="1"></div>
+            </div>
+        </div></td><td data-col-seq="1">B-1<br/>Tổng mã: 1</td><td data-col-seq="2">admin24h</td><td data-col-seq="3">1 kg</td><td data-col-seq="4">0.17 kg</td><td data-col-seq="5">1 kg</td><td data-col-seq="6">0 m3</td><td data-col-seq="7">29-06-2019 05:06:15</td><td class="text-center" data-th="Trạng thái" data-col-seq="8">Đã đóng bao</td><td class="text-right" data-th="Thao tác" data-col-seq="9"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                         <li><a href="/bag/update/1"><i class="glyphicon glyphicon-pencil font-12"></i> Sửa</a></li>
+                         <li>
+                            <a href="/bag/delete/1" class="confirm-delete"><i class="glyphicon glyphicon-remove font-12"></i> Xóa</a>
+                         </li>
+                    </ul>
+                </div></td></tr>
+<tr data-key="2"><td class="skip-export kv-align-center kv-align-middle kv-expand-icon-cell" title="Expand" data-th="Xem chi tiết" style="width:50px;" data-col-seq="0">        <div class="kv-expand-row w1">
+            <div class="kv-expand-icon kv-state-expanded w1"><span class="glyphicon glyphicon-expand"></span></div>
+            <div class="kv-expand-detail skip-export w1" style="display:none;">
+                <div class="skip-export kv-expanded-row w1" data-index="1" data-key="2"></div>
+            </div>
+        </div></td><td data-col-seq="1">B-2<br/>Tổng mã: 0</td><td data-col-seq="2">admin24h</td><td data-col-seq="3">12 kg</td><td data-col-seq="4">1.77 kg</td><td data-col-seq="5">12 kg</td><td data-col-seq="6">0.01 m3</td><td data-col-seq="7">29-06-2019 05:08:38</td><td class="text-center" data-th="Trạng thái" data-col-seq="8">Đã đóng bao</td><td class="text-right" data-th="Thao tác" data-col-seq="9"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                         <li><a href="/bag/update/2"><i class="glyphicon glyphicon-pencil font-12"></i> Sửa</a></li>
+                         <li>
+                            <a href="/bag/delete/2" class="confirm-delete"><i class="glyphicon glyphicon-remove font-12"></i> Xóa</a>
+                         </li>
+                    </ul>
+                </div></td></tr>
+<tr data-key="3"><td class="skip-export kv-align-center kv-align-middle kv-expand-icon-cell" title="Expand" data-th="Xem chi tiết" style="width:50px;" data-col-seq="0">        <div class="kv-expand-row w1">
+            <div class="kv-expand-icon kv-state-expanded w1"><span class="glyphicon glyphicon-expand"></span></div>
+            <div class="kv-expand-detail skip-export w1" style="display:none;">
+                <div class="skip-export kv-expanded-row w1" data-index="2" data-key="3"></div>
+            </div>
+        </div></td><td data-col-seq="1">B-3<br/>Tổng mã: 0</td><td data-col-seq="2">admin24h</td><td data-col-seq="3">22 kg</td><td data-col-seq="4">0.97 kg</td><td data-col-seq="5">22 kg</td><td data-col-seq="6">0.01 m3</td><td data-col-seq="7">20-07-2019 03:23:12</td><td class="text-center" data-th="Trạng thái" data-col-seq="8">Chờ xử lý</td><td class="text-right" data-th="Thao tác" data-col-seq="9"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                         <li><a href="/bag/update/3"><i class="glyphicon glyphicon-pencil font-12"></i> Sửa</a></li>
+                         <li>
+                            <a href="/bag/delete/3" class="confirm-delete"><i class="glyphicon glyphicon-remove font-12"></i> Xóa</a>
+                         </li>
+                    </ul>
+                </div></td></tr>
+<tr data-key="4"><td class="skip-export kv-align-center kv-align-middle kv-expand-icon-cell" title="Expand" data-th="Xem chi tiết" style="width:50px;" data-col-seq="0">        <div class="kv-expand-row w1">
+            <div class="kv-expand-icon kv-state-expanded w1"><span class="glyphicon glyphicon-expand"></span></div>
+            <div class="kv-expand-detail skip-export w1" style="display:none;">
+                <div class="skip-export kv-expanded-row w1" data-index="3" data-key="4"></div>
+            </div>
+        </div></td><td data-col-seq="1">B-4<br/>Tổng mã: 0</td><td data-col-seq="2">khotq</td><td data-col-seq="3">1 kg</td><td data-col-seq="4">0 kg</td><td data-col-seq="5">1 kg</td><td data-col-seq="6">0 m3</td><td data-col-seq="7">15-11-2019 05:00:45</td><td class="text-center" data-th="Trạng thái" data-col-seq="8">Chờ xử lý</td><td class="text-right" data-th="Thao tác" data-col-seq="9"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                         <li><a href="/bag/update/4"><i class="glyphicon glyphicon-pencil font-12"></i> Sửa</a></li>
+                         <li>
+                            <a href="/bag/delete/4" class="confirm-delete"><i class="glyphicon glyphicon-remove font-12"></i> Xóa</a>
+                         </li>
+                    </ul>
+                </div></td></tr>
+</tbody></table></div>
+    <div class="kv-panel-after"></div>
+    <div class="panel-footer">    <div class="kv-panel-pager">
+        
+    </div>
+    
+    <div class="clearfix"></div></div>
+</div></div></div>
+    </div>
+
+</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 2.3.0
+            </div>
+            <strong>Copyright &copy; 2014-2015.</strong> All rights reserved.
+        </footer>
+    </div>
+
+  <script src="/assets/116fe791/yii.js"></script>
+<script src="/assets/116fe791/yii.validation.js"></script>
+<script src="/assets/116fe791/yii.activeForm.js"></script>
+<script src="/assets/95c3371/js/kv-grid-expand.min.js"></script>
+<script src="/assets/298354ee/dist/js/bootstrap-dialog.min.js"></script>
+<script src="/assets/1472305f/js/dialog-yii.min.js"></script>
+<script src="/assets/95c3371/js/kv-grid-export.min.js"></script>
+<script src="/assets/95c3371/js/jquery.resizableColumns.min.js"></script>
+<script src="/assets/116fe791/yii.gridView.js"></script>
+<script src="/assets/415e3cfd/jquery.pjax.js"></script>
+<script src="/plugins/select2/select2.js"></script>
+<script src="/js/moment-with-locales.js"></script>
+<script src="/plugins/datepicker/bootstrap-datepicker.js"></script>
+<script src="/plugins/iCheck/icheck.min.js"></script>
+<script src="/js/bootstrap-toggle.js"></script>
+<script src="/js/app.min.js"></script>
+<script src="/js/users.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/notify.js"></script>
+<script src="/js/chatbox.js"></script>
+<script src="/js/simple.money.format.js"></script>
+<script type="text/javascript">jQuery(document).ready(function () {
+jQuery('#w0').yiiActiveForm([{"id":"bagsearch-status","name":"status","container":".field-bagsearch-status","input":"#bagsearch-status","validate":function (attribute, value, messages, deferred, $form) {yii.validation.number(value, messages, {"pattern":/^\s*[+-]?\d+\s*$/,"message":"Trạng thái must be an integer.","skipOnEmpty":1});}}], []);
+kvExpandRow(kvExpandRow_ae19b71c);
+krajeeYiiConfirm('krajeeDialog');
+var kvGridInit_4d364a73=function(){
+jQuery('#w1 .export-html').gridexport(kvGridExp_7a901532);jQuery('#w1 .export-csv').gridexport(kvGridExp_37469a5f);jQuery('#w1 .export-txt').gridexport(kvGridExp_48e43ab1);jQuery('#w1 .export-xls').gridexport(kvGridExp_648bbf49);jQuery('#w1 .export-json').gridexport(kvGridExp_5caf8e1e);jQuery("#w1-container").resizableColumns('destroy').resizableColumns({"store":null,"resizeFromBody":false});
+};
+kvGridInit_4d364a73();
+jQuery('#w3').dropdown();
+jQuery("#w1-pjax").on('pjax:timeout', function(e){e.preventDefault()}).on('pjax:send', function(){$("#w1-pjax").addClass('kv-grid-loading')}).off('pjax:complete.5619b41a').on('pjax:complete.5619b41a', function(){setTimeout(kvGridInit_4d364a73, 2500);$("#w1-pjax").removeClass('kv-grid-loading');
+});
+jQuery('#w1').yiiGridView({"filterUrl":"\/bag\/index","filterSelector":"#w1-filters input, #w1-filters select"});
+jQuery("#w1-pjax").off('pjax:complete.da71e5b3').on('pjax:complete.da71e5b3', function(){ kvExpandRow(kvExpandRow_ae19b71c); });
+jQuery(document).pjax("#w1-pjax a", {"push":true,"replace":false,"timeout":1000,"scrollTo":false,"container":"#w1-pjax"});
+jQuery(document).on("submit", "#w1-pjax form[data-pjax]", function (event) {jQuery.pjax.submit(event, {"push":true,"replace":false,"timeout":1000,"scrollTo":false,"container":"#w1-pjax"});});
+});</script>  <!-- modal -->
+  <div class="modal " id="myModal" style="display: none;">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close btn-close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h3 class="modal-title" id="exampleModalLabel">Thông báo</h3>
+              </div>
+              <div class="modal-body">
+                  <div class="modal-container"></div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-default pull-right btn-close" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+        $.ajax({
+             url: 'https://thietkewebos.com/thong-bao.html',
+              type: 'get',             
+              dataType: "json", 
+              success: function (rs) {
+                  if (rs.status) {
+                      $('#myModal').modal('show');
+                      $('.modal-container').html(rs.view);
+                  } 
+
+              }
+          });
+
+    });
+
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $("#myModal").modal({
+            show: false,
+            backdrop: 'static'
+        });
+        $('.btn-close').on('click',function(){
+            $('input[id=orderNumber]').focus();  
+        });       
+    });
+  </script>
+  </body>
+</html>

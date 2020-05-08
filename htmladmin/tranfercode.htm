@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Danh sách kiện hàng</title>
+    <link href="/assets/d0461e8f/css/bootstrap.css" rel="stylesheet">
+<link href="/assets/95c3371/css/kv-grid.min.css" rel="stylesheet">
+<link href="/assets/298354ee/dist/css/bootstrap-dialog.min.css" rel="stylesheet">
+<link href="/assets/95c3371/css/jquery.resizableColumns.min.css" rel="stylesheet">
+<link href="/assets/837aee75/css/select2.min.css" rel="stylesheet">
+<link href="/assets/837aee75/css/select2-addl.min.css" rel="stylesheet">
+<link href="/assets/837aee75/css/select2-krajee.min.css" rel="stylesheet">
+<link href="/assets/65ca6bf3/css/kv-widgets.min.css" rel="stylesheet">
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="/plugins/select2/select2.css" rel="stylesheet">
+<link href="/plugins/iCheck/minimal/blue.css" rel="stylesheet">
+<link href="/plugins/datepicker/datepicker3.css" rel="stylesheet">
+<link href="/css/skins/_all-skins.min.css" rel="stylesheet">
+<link href="/css/bootstrap-toggle.css" rel="stylesheet">
+<link href="/css/layout.css" rel="stylesheet">
+<style>.bootstrap-dialog .modal-header.bootstrap-dialog-draggable{cursor:move}</style>
+<script src="/assets/1472305f/js/dialog.min.js"></script>
+<script type="text/javascript">var krajeeDialogDefaults_71c625b2 = {"alert":{"type":"type-info","title":"Information","buttonLabel":"<span class=\"glyphicon glyphicon-ok\"></span> Ok"},"confirm":{"type":"type-warning","title":"Confirmation","btnOKClass":"btn-warning","btnOKLabel":"<span class=\"glyphicon glyphicon-ok\"></span> Ok","btnCancelLabel":"<span class=\"glyphicon glyphicon-ban-circle\"></span> Cancel"},"prompt":{"draggable":false,"title":"Information","buttons":[{"label":"Cancel","icon":"glyphicon glyphicon-ban-circle"},{"label":"Ok","icon":"glyphicon glyphicon-ok","cssClass":"btn-primary"}],"closable":false},"dialog":{"draggable":true,"title":"Information","buttons":[{"label":"Cancel","icon":"glyphicon glyphicon-ban-circle"},{"label":"Ok","icon":"glyphicon glyphicon-ok","cssClass":"btn-primary"}]}};
+var krajeeDialog_e48a4427 = {"id":"w1"};
+var krajeeDialog=new KrajeeDialog(true,krajeeDialog_e48a4427,krajeeDialogDefaults_71c625b2);
+var kvGridExp_e0dd3dff={"gridId":"w0","target":"_blank","messages":{"allowPopups":"Disable any popup blockers in your browser to ensure proper download.","confirmDownload":"Ok to proceed?","downloadProgress":"Generating the export file. Please wait...","downloadComplete":"Request submitted! You may safely close this dialog after saving your downloaded file."},"exportConversions":[{"from":"<span class=\"glyphicon glyphicon-ok text-success\"></span>","to":"Active"},{"from":"<span class=\"glyphicon glyphicon-remove text-danger\"></span>","to":"Inactive"}],"showConfirmAlert":true};
+var kvGridExp_12735912={"filename":"grid-export","showHeader":true,"showPageSummary":true,"showFooter":true};
+var kvGridExp_fb069215={"dialogLib":"krajeeDialog","gridOpts":kvGridExp_e0dd3dff,"genOpts":kvGridExp_12735912,"alertMsg":"The HTML export file will be generated for download.","config":{"cssFile":"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"}};
+var kvGridExp_158f4d98={"dialogLib":"krajeeDialog","gridOpts":kvGridExp_e0dd3dff,"genOpts":kvGridExp_12735912,"alertMsg":"The CSV export file will be generated for download.","config":{"colDelimiter":",","rowDelimiter":"\r\n"}};
+var kvGridExp_0a35c183={"dialogLib":"krajeeDialog","gridOpts":kvGridExp_e0dd3dff,"genOpts":kvGridExp_12735912,"alertMsg":"The TEXT export file will be generated for download.","config":{"colDelimiter":"\t","rowDelimiter":"\r\n"}};
+var kvGridExp_368e0eaa={"dialogLib":"krajeeDialog","gridOpts":kvGridExp_e0dd3dff,"genOpts":kvGridExp_12735912,"alertMsg":"The EXCEL export file will be generated for download.","config":{"worksheet":"ExportWorksheet","cssFile":""}};
+var kvGridExp_6463fc66={"dialogLib":"krajeeDialog","gridOpts":kvGridExp_e0dd3dff,"genOpts":kvGridExp_12735912,"alertMsg":"The JSON export file will be generated for download.","config":{"colHeads":[],"slugColHeads":false,"jsonReplacer":function(k,v){return typeof(v)==='string'?$.trim(v):v},"indentSpace":4}};
+kvTogOpts_b8f5f61e={"id":"w0-togdata-page","pjax":0,"mode":"page","msg":"There are 71,570 records. Are you sure you want to display them all?","lib":krajeeDialog};
+var s2options_d6851687 = {"themeCss":".select2-container--krajee","sizeCss":"","doReset":true,"doToggle":false,"doOrder":false};
+window.select2_708bdab4 = {"allowClear":true,"theme":"krajee","width":"100%","placeholder":"Chọn..","language":"en-US"};
+</script>      <script>
+          var homeUrl = 'https://nguonhang24h.vn';
+          var baseUrl = 'http://cms.nguonhang24h.vn';
+      </script>
+      <script src="/js/jQuery-2.1.4.min.js"></script>
+      <script src="/bootstrap/js/bootstrap.js"></script>
+      <script src="/js/main.js"></script>
+  </head>
+  <body class="skin-blue sidebar-mini wysihtml5-supported">
+           <div class="wrapper">
+        <header class="main-header">
+    <!-- Logo -->
+    <a href="/" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>H</b>S</span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><b>HS</b> PANEL</span>
+    </a>
+
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top" role="navigation">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+        </a>
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <li class="dropdown messages-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="label label-success">4</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">You have 4 messages</li>
+                        <li>
+                            <!-- inner menu: contains the actual data -->
+                            <ul class="menu">
+                                <li><!-- start message -->
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="/images/admin.png" class="img-circle" alt="User Image">
+                                        </div>
+                                        <h4>
+                                            Support Team
+                                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                        </h4>
+                                        <p>Why not buy a new awesome theme?</p>
+                                    </a>
+                                </li>
+                                <!-- end message -->
+                                <li>
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="/images/admin.png" class="img-circle" alt="User Image">
+                                        </div>
+                                        <h4>
+                                            AdminLTE Design Team
+                                            <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                                        </h4>
+                                        <p>Why not buy a new awesome theme?</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="/images/admin.png" class="img-circle" alt="User Image">
+                                        </div>
+                                        <h4>
+                                            Developers
+                                            <small><i class="fa fa-clock-o"></i> Today</small>
+                                        </h4>
+                                        <p>Why not buy a new awesome theme?</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="/images/admin.png" class="img-circle" alt="User Image">
+                                        </div>
+                                        <h4>
+                                            Sales Department
+                                            <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                                        </h4>
+                                        <p>Why not buy a new awesome theme?</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="/images/admin.png" class="img-circle" alt="User Image">
+                                        </div>
+                                        <h4>
+                                            Reviewers
+                                            <small><i class="fa fa-clock-o"></i> 2 days</small>
+                                        </h4>
+                                        <p>Why not buy a new awesome theme?</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer"><a href="#">See All Messages</a></li>
+                    </ul>
+                </li>
+                <!-- Notifications: style can be found in dropdown.less -->
+                <li class="dropdown notifications-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-bell-o"></i>
+                        <span class="label label-warning">10</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">You have 10 notifications</li>
+                        <li>
+                            <!-- inner menu: contains the actual data -->
+                            <ul class="menu">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
+                                        page and may cause design problems
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-users text-red"></i> 5 new members joined
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-user text-red"></i> You changed your username
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer"><a href="#">View all</a></li>
+                    </ul>
+                </li>
+
+
+                                    <li><a target="_blank" href="https://nguonhang24h.vn" class="pull-left"><i class="glyphicon glyphicon-home"></i> Open site</a>  </li>
+                    <li>
+                        <a href="/sign/out"><i class="glyphicon glyphicon-log-out"></i> Logout</a>
+                    </li>
+                            </ul>
+        </div>
+
+    </nav>
+</header>        <!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="/images/admin.png" class="img-circle" alt="">
+            </div>
+            <div class="pull-left info">
+                <p>adminkhovn</p>
+                <a href="javascript:void(0)"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+        </div>
+        <ul class="sidebar-menu">
+            <li class="header">MAIN NAVIGATION</li>
+            <li class="">
+                <a href="/"> <i class="fa fa-dashboard"></i>
+                    <span>Dashboard</span> <!--<i class="fa fa-angle-left pull-right"></i>-->
+                </a>
+            </li>
+                                                <li class="treeview ">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>                            <span> Quản lý đơn hàng</span>
+                                                            <i class="fa fa-angle-left pull-right"></i>
+                                                    </a>
+                                                    <ul class="treeview-menu ">
+                                                                    <li class="">
+                                        <a href="/orders/index">
+                                            <i class="fa fa-circle-o"></i>                                            Tất cả đơn hàng                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                            </ul>
+                                            </li>
+                                    <li class="treeview active">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>                            <span> Quản lý kho</span>
+                                                            <i class="fa fa-angle-left pull-right"></i>
+                                                    </a>
+                                                    <ul class="treeview-menu menu-open">
+                                                                    <li class="">
+                                        <a href="/shipping/barcode">
+                                            <i class="fa fa-money" aria-hidden="true"></i>                                            Kho nhập mã vận đơn                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                                    <li class="">
+                                        <a href="/lo/index">
+                                            <i aria-hidden="true" class="glyphicon glyphicon-file"></i>                                            QL Phiếu xuất kho                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                                    <li class="">
+                                        <a href="/bag/index">
+                                            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>                                            Quản lý bao                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                                    <li class="1">
+                                        <a href="/transfercode/index">
+                                            <i aria-hidden="true" class="glyphicon glyphicon-file"></i>                                            Quản lý mã vận đơn                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                            </ul>
+                                            </li>
+                                    <li class="treeview ">
+                        <a href="/history/index">
+                            <i class="fa fa-history" aria-hidden="true"></i>                            <span> Lịch sử người dùng</span>
+                                                    </a>
+                                            </li>
+                                    <li class="treeview ">
+                        <a href="javascript:void(0)">
+                            <i aria-hidden="true" class="glyphicon glyphicon-user"></i>                            <span> Thông tin tài khoản</span>
+                                                            <i class="fa fa-angle-left pull-right"></i>
+                                                    </a>
+                                                    <ul class="treeview-menu ">
+                                                                    <li class="">
+                                        <a href="/user/my-profile">
+                                            <i aria-hidden="true" class="glyphicon glyphicon-lock"></i>                                            Hồ sơ                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                                    <li class="">
+                                        <a href="/user/change-password">
+                                            <i aria-hidden="true" class="glyphicon glyphicon-lock"></i>                                            Thay đổi mật khẩu                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                            </ul>
+                                            </li>
+                        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>        <div class="content-wrapper">
+            <section class="content-header">
+                <ol class="breadcrumb"><li><a href="/">Home</a></li>
+<li class="active">Danh sách kiện hàng</li>
+</ol>            </section>
+            <section class="content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        
+<div class="tb-transfercode ">
+    <div class="box-body">
+                <p>
+                    </p>
+        <div id="w0" class="grid-view hide-resize" data-krajee-grid="kvGridInit_d021252f"><div class="panel panel-primary">
+    <div class="panel-heading">    <div class="pull-right">
+        <div class="summary">Showing <b>1-20</b> of <b>71,570</b> items.</div>
+    </div>
+    <h3 class="panel-title">
+        <h3 class="panel-title">Danh sách kiện hàng</h3>
+    </h3>
+    <div class="clearfix"></div></div>
+    <div class="kv-panel-before">    <div class="btn-toolbar kv-grid-toolbar toolbar-container pull-right"></div>
+    
+    <div class="clearfix"></div></div>
+    <div id="w0-container" class="table-responsive kv-grid-container"><table id="tbl_manager" class="table table-bordered table-hover dataTable kv-grid-table table-striped kv-table-wrap"><thead>
+
+<tr><th style="width: 12%;" data-col-seq="0"><a href="/transfercode/index?sort=transferID" data-sort="transferID">Mã kiện</a></th><th style="width: 12%;" data-col-seq="1"><a href="/transfercode/index?sort=identify" data-sort="identify">Mã ĐH</a></th><th class="text-center" style="width: 7%;" data-col-seq="2"><a href="/transfercode/index?sort=kg" data-sort="kg">Cân nặng</a></th><th class="text-center" style="width: 5%;" data-col-seq="3"><a href="/transfercode/index?sort=long" data-sort="long">Dài(cm)</a></th><th class="text-center" style="width: 5%;" data-col-seq="4"><a href="/transfercode/index?sort=wide" data-sort="wide">Rộng(cm)</a></th><th class="text-center" style="width: 5%;" data-col-seq="5"><a href="/transfercode/index?sort=high" data-sort="high">Cao(cm)</a></th><th class="text-center" style="width: 7%;" data-col-seq="6">Cân<br> quy đổi</th><th class="text-center" style="width: 7%;" data-col-seq="7">Cân<br> tính tiền</th><th style="width: 12%;" data-col-seq="8"><a href="/transfercode/index?sort=createDate" data-sort="createDate">Ngày tạo</a></th><th style="width: 12%;" data-col-seq="9">Thời gian</th><th class="text-center kv-align-middle" style="width: 10%;" data-col-seq="10"><a href="/transfercode/index?sort=shipStatus" data-sort="shipStatus">Trạng thái</a></th><th class="text-center" style="width: 10%;" data-col-seq="11">Thao tác</th></tr><tr id="w0-filters" class="filters skip-export"><td><input type="text" class="form-control" name="TbTransfercodeSearch[transferID]"></td><td><input type="text" class="form-control" name="TbTransfercodeSearch[identify]"></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><input type="text" class="form-control" name="TbTransfercodeSearch[createDate]"></td><td>&nbsp;</td><td><div class="kv-plugin-loading loading-tbtransfercodesearch-shipstatus">&nbsp;</div><select id="tbtransfercodesearch-shipstatus" class="form-control" name="TbTransfercodeSearch[shipStatus]" data-s2-options="s2options_d6851687" data-krajee-select2="select2_708bdab4" style="display:none">
+<option value="">Chọn..</option>
+<option value="0">Shop xưởng giao</option>
+<option value="2">Đang vận chuyển</option>
+<option value="3">Kho VN</option>
+<option value="5">Đã trả hàng</option>
+</select></td><td class="text-center">&nbsp;</td></tr>
+
+</thead>
+<tbody>
+<tr data-key="75173"><td data-th="Mã kiện" data-col-seq="0"><a class="text-blue" target="_blank" href="/don-hang-view-96206#shop-87463"><b>75349538902464</b></a></td><td data-th="Mã ĐH" data-col-seq="1"><a class="underline" target="_blank" href="/don-hang-view-96206"><b>A2869-88</b></a></td><td class="text-center" data-th="Cân nặng" data-col-seq="2">0 kg</td><td class="text-center" data-th="Dài(cm)" data-col-seq="3">0</td><td class="text-center" data-th="Rộng(cm)" data-col-seq="4">0</td><td class="text-center" data-th="Cao(cm)" data-col-seq="5">0</td><td class="text-center" data-th="Cân quy đổi" data-col-seq="6">0</td><td class="text-center" data-th="Cân tính tiền" data-col-seq="7">0</td><td data-th="Ngày tạo" data-col-seq="8">08/05/2020 17:57</td><td data-th="Thời gian" data-col-seq="9"><span class="not-set">(not set)</span></td><td class="text-center kv-align-middle" data-th="Trạng thái" data-col-seq="10"><span class="label label-warning">Shop xưởng giao</span></td><td class="text-center" data-col-seq="11">---</td></tr>
+<tr data-key="75172"><td data-th="Mã kiện" data-col-seq="0"><a class="text-blue" target="_blank" href="/don-hang-view-96204#shop-87461"><b>773034888415363</b></a></td><td data-th="Mã ĐH" data-col-seq="1"><a class="underline" target="_blank" href="/don-hang-view-96204"><b>A2869-86</b></a></td><td class="text-center" data-th="Cân nặng" data-col-seq="2">0 kg</td><td class="text-center" data-th="Dài(cm)" data-col-seq="3">0</td><td class="text-center" data-th="Rộng(cm)" data-col-seq="4">0</td><td class="text-center" data-th="Cao(cm)" data-col-seq="5">0</td><td class="text-center" data-th="Cân quy đổi" data-col-seq="6">0</td><td class="text-center" data-th="Cân tính tiền" data-col-seq="7">0</td><td data-th="Ngày tạo" data-col-seq="8">08/05/2020 17:57</td><td data-th="Thời gian" data-col-seq="9"><span class="not-set">(not set)</span></td><td class="text-center kv-align-middle" data-th="Trạng thái" data-col-seq="10"><span class="label label-warning">Shop xưởng giao</span></td><td class="text-center" data-col-seq="11">---</td></tr>
+<tr data-key="75171"><td data-th="Mã kiện" data-col-seq="0"><a class="text-blue" target="_blank" href="/don-hang-view-95752#shop-87093"><b>798749294</b></a></td><td data-th="Mã ĐH" data-col-seq="1"><a class="underline" target="_blank" href="/don-hang-view-95752"><b>A3874-1</b></a></td><td class="text-center" data-th="Cân nặng" data-col-seq="2">0 kg</td><td class="text-center" data-th="Dài(cm)" data-col-seq="3">0</td><td class="text-center" data-th="Rộng(cm)" data-col-seq="4">0</td><td class="text-center" data-th="Cao(cm)" data-col-seq="5">0</td><td class="text-center" data-th="Cân quy đổi" data-col-seq="6">0</td><td class="text-center" data-th="Cân tính tiền" data-col-seq="7">0</td><td data-th="Ngày tạo" data-col-seq="8">08/05/2020 17:30</td><td data-th="Thời gian" data-col-seq="9"><span class="not-set">(not set)</span></td><td class="text-center kv-align-middle" data-th="Trạng thái" data-col-seq="10"><span class="label label-warning">Shop xưởng giao</span></td><td class="text-center" data-col-seq="11">---</td></tr>
+<tr data-key="75170"><td data-th="Mã kiện" data-col-seq="0"><a class="text-blue" target="_blank" href="/don-hang-view-94120#shop-85631"><b>YT4505055933765</b></a></td><td data-th="Mã ĐH" data-col-seq="1"><a class="underline" target="_blank" href="/don-hang-view-94120"><b>A2833-133</b></a></td><td class="text-center" data-th="Cân nặng" data-col-seq="2">0 kg</td><td class="text-center" data-th="Dài(cm)" data-col-seq="3">0</td><td class="text-center" data-th="Rộng(cm)" data-col-seq="4">0</td><td class="text-center" data-th="Cao(cm)" data-col-seq="5">0</td><td class="text-center" data-th="Cân quy đổi" data-col-seq="6">0</td><td class="text-center" data-th="Cân tính tiền" data-col-seq="7">0</td><td data-th="Ngày tạo" data-col-seq="8">08/05/2020 16:48</td><td data-th="Thời gian" data-col-seq="9"><span class="not-set">(not set)</span></td><td class="text-center kv-align-middle" data-th="Trạng thái" data-col-seq="10"><span class="label label-warning">Shop xưởng giao</span></td><td class="text-center" data-col-seq="11">---</td></tr>
+<tr data-key="75169"><td data-th="Mã kiện" data-col-seq="0"><a class="text-blue" target="_blank" href="/don-hang-view-92308#shop-84095"><b>YT4471100100019</b></a></td><td data-th="Mã ĐH" data-col-seq="1"><a class="underline" target="_blank" href="/don-hang-view-92308"><b>A3329-71</b></a></td><td class="text-center" data-th="Cân nặng" data-col-seq="2">0 kg</td><td class="text-center" data-th="Dài(cm)" data-col-seq="3">0</td><td class="text-center" data-th="Rộng(cm)" data-col-seq="4">0</td><td class="text-center" data-th="Cao(cm)" data-col-seq="5">0</td><td class="text-center" data-th="Cân quy đổi" data-col-seq="6">0</td><td class="text-center" data-th="Cân tính tiền" data-col-seq="7">0</td><td data-th="Ngày tạo" data-col-seq="8">08/05/2020 16:48</td><td data-th="Thời gian" data-col-seq="9"><span class="not-set">(not set)</span></td><td class="text-center kv-align-middle" data-th="Trạng thái" data-col-seq="10"><span class="label label-info">Đang vận chuyển</span></td><td class="text-center" data-col-seq="11">---</td></tr>
+<tr data-key="75168"><td data-th="Mã kiện" data-col-seq="0"><a class="text-blue" target="_blank" href="/don-hang-view-92308#shop-84095"><b>YT4471100099922</b></a></td><td data-th="Mã ĐH" data-col-seq="1"><a class="underline" target="_blank" href="/don-hang-view-92308"><b>A3329-71</b></a></td><td class="text-center" data-th="Cân nặng" data-col-seq="2">0 kg</td><td class="text-center" data-th="Dài(cm)" data-col-seq="3">0</td><td class="text-center" data-th="Rộng(cm)" data-col-seq="4">0</td><td class="text-center" data-th="Cao(cm)" data-col-seq="5">0</td><td class="text-center" data-th="Cân quy đổi" data-col-seq="6">0</td><td class="text-center" data-th="Cân tính tiền" data-col-seq="7">0</td><td data-th="Ngày tạo" data-col-seq="8">08/05/2020 16:48</td><td data-th="Thời gian" data-col-seq="9"><span class="not-set">(not set)</span></td><td class="text-center kv-align-middle" data-th="Trạng thái" data-col-seq="10"><span class="label label-info">Đang vận chuyển</span></td><td class="text-center" data-col-seq="11">---</td></tr>
+<tr data-key="75167"><td data-th="Mã kiện" data-col-seq="0"><a class="text-blue" target="_blank" href="/don-hang-view-92308#shop-84095"><b>YT4471100100186</b></a></td><td data-th="Mã ĐH" data-col-seq="1"><a class="underline" target="_blank" href="/don-hang-view-92308"><b>A3329-71</b></a></td><td class="text-center" data-th="Cân nặng" data-col-seq="2">0 kg</td><td class="text-center" data-th="Dài(cm)" data-col-seq="3">0</td><td class="text-center" data-th="Rộng(cm)" data-col-seq="4">0</td><td class="text-center" data-th="Cao(cm)" data-col-seq="5">0</td><td class="text-center" data-th="Cân quy đổi" data-col-seq="6">0</td><td class="text-center" data-th="Cân tính tiền" data-col-seq="7">0</td><td data-th="Ngày tạo" data-col-seq="8">08/05/2020 16:48</td><td data-th="Thời gian" data-col-seq="9"><span class="not-set">(not set)</span></td><td class="text-center kv-align-middle" data-th="Trạng thái" data-col-seq="10"><span class="label label-primary">Kho VN</span></td><td class="text-center" data-col-seq="11">---</td></tr>
+<tr data-key="75166"><td data-th="Mã kiện" data-col-seq="0"><a class="text-blue" target="_blank" href="/don-hang-view-95190#shop-86628"><b>300337991535</b></a></td><td data-th="Mã ĐH" data-col-seq="1"><a class="underline" target="_blank" href="/don-hang-view-95190"><b>A1663-138</b></a></td><td class="text-center" data-th="Cân nặng" data-col-seq="2">0 kg</td><td class="text-center" data-th="Dài(cm)" data-col-seq="3">0</td><td class="text-center" data-th="Rộng(cm)" data-col-seq="4">0</td><td class="text-center" data-th="Cao(cm)" data-col-seq="5">0</td><td class="text-center" data-th="Cân quy đổi" data-col-seq="6">0</td><td class="text-center" data-th="Cân tính tiền" data-col-seq="7">0</td><td data-th="Ngày tạo" data-col-seq="8">08/05/2020 16:33</td><td data-th="Thời gian" data-col-seq="9"><span class="not-set">(not set)</span></td><td class="text-center kv-align-middle" data-th="Trạng thái" data-col-seq="10"><span class="label label-warning">Shop xưởng giao</span></td><td class="text-center" data-col-seq="11">---</td></tr>
+<tr data-key="75165"><td data-th="Mã kiện" data-col-seq="0"><a class="text-blue" target="_blank" href="/don-hang-view-95190#shop-86628"><b>300337991528</b></a></td><td data-th="Mã ĐH" data-col-seq="1"><a class="underline" target="_blank" href="/don-hang-view-95190"><b>A1663-138</b></a></td><td class="text-center" data-th="Cân nặng" data-col-seq="2">0 kg</td><td class="text-center" data-th="Dài(cm)" data-col-seq="3">0</td><td class="text-center" data-th="Rộng(cm)" data-col-seq="4">0</td><td class="text-center" data-th="Cao(cm)" data-col-seq="5">0</td><td class="text-center" data-th="Cân quy đổi" data-col-seq="6">0</td><td class="text-center" data-th="Cân tính tiền" data-col-seq="7">0</td><td data-th="Ngày tạo" data-col-seq="8">08/05/2020 16:33</td><td data-th="Thời gian" data-col-seq="9"><span class="not-set">(not set)</span></td><td class="text-center kv-align-middle" data-th="Trạng thái" data-col-seq="10"><span class="label label-warning">Shop xưởng giao</span></td><td class="text-center" data-col-seq="11">---</td></tr>
+<tr data-key="75164"><td data-th="Mã kiện" data-col-seq="0"><a class="text-blue" target="_blank" href="/don-hang-view-95928#shop-87253"><b>75349280572179</b></a></td><td data-th="Mã ĐH" data-col-seq="1"><a class="underline" target="_blank" href="/don-hang-view-95928"><b>A881-593</b></a></td><td class="text-center" data-th="Cân nặng" data-col-seq="2">0 kg</td><td class="text-center" data-th="Dài(cm)" data-col-seq="3">0</td><td class="text-center" data-th="Rộng(cm)" data-col-seq="4">0</td><td class="text-center" data-th="Cao(cm)" data-col-seq="5">0</td><td class="text-center" data-th="Cân quy đổi" data-col-seq="6">0</td><td class="text-center" data-th="Cân tính tiền" data-col-seq="7">0</td><td data-th="Ngày tạo" data-col-seq="8">08/05/2020 15:53</td><td data-th="Thời gian" data-col-seq="9"><span class="not-set">(not set)</span></td><td class="text-center kv-align-middle" data-th="Trạng thái" data-col-seq="10"><span class="label label-warning">Shop xưởng giao</span></td><td class="text-center" data-col-seq="11">---</td></tr>
+<tr data-key="75163"><td data-th="Mã kiện" data-col-seq="0"><a class="text-blue" target="_blank" href="/don-hang-view-95261#shop-86690"><b>4305330731279</b></a></td><td data-th="Mã ĐH" data-col-seq="1"><a class="underline" target="_blank" href="/don-hang-view-95261"><b>A3764-85</b></a></td><td class="text-center" data-th="Cân nặng" data-col-seq="2">0 kg</td><td class="text-center" data-th="Dài(cm)" data-col-seq="3">0</td><td class="text-center" data-th="Rộng(cm)" data-col-seq="4">0</td><td class="text-center" data-th="Cao(cm)" data-col-seq="5">0</td><td class="text-center" data-th="Cân quy đổi" data-col-seq="6">0</td><td class="text-center" data-th="Cân tính tiền" data-col-seq="7">0</td><td data-th="Ngày tạo" data-col-seq="8">08/05/2020 15:25</td><td data-th="Thời gian" data-col-seq="9"><span class="not-set">(not set)</span></td><td class="text-center kv-align-middle" data-th="Trạng thái" data-col-seq="10"><span class="label label-warning">Shop xưởng giao</span></td><td class="text-center" data-col-seq="11">---</td></tr>
+<tr data-key="75162"><td data-th="Mã kiện" data-col-seq="0"><a class="text-blue" target="_blank" href="/don-hang-view-84971#shop-77305"><b>773034154289658</b></a></td><td data-th="Mã ĐH" data-col-seq="1"><a class="underline" target="_blank" href="/don-hang-view-84971"><b>A3550-78</b></a></td><td class="text-center" data-th="Cân nặng" data-col-seq="2">0 kg</td><td class="text-center" data-th="Dài(cm)" data-col-seq="3">0</td><td class="text-center" data-th="Rộng(cm)" data-col-seq="4">0</td><td class="text-center" data-th="Cao(cm)" data-col-seq="5">0</td><td class="text-center" data-th="Cân quy đổi" data-col-seq="6">0</td><td class="text-center" data-th="Cân tính tiền" data-col-seq="7">0</td><td data-th="Ngày tạo" data-col-seq="8">08/05/2020 15:22</td><td data-th="Thời gian" data-col-seq="9"><span class="not-set">(not set)</span></td><td class="text-center kv-align-middle" data-th="Trạng thái" data-col-seq="10"><span class="label label-info">Đang vận chuyển</span></td><td class="text-center" data-col-seq="11">---</td></tr>
+<tr data-key="75161"><td data-th="Mã kiện" data-col-seq="0"><a class="text-blue" target="_blank" href="/don-hang-view-92232#shop-84020"><b>SF1021280114007-2</b></a></td><td data-th="Mã ĐH" data-col-seq="1"><a class="underline" target="_blank" href="/don-hang-view-92232"><b>A1960-1049</b></a></td><td class="text-center" data-th="Cân nặng" data-col-seq="2">0.01 kg</td><td class="text-center" data-th="Dài(cm)" data-col-seq="3">0</td><td class="text-center" data-th="Rộng(cm)" data-col-seq="4">0</td><td class="text-center" data-th="Cao(cm)" data-col-seq="5">0</td><td class="text-center" data-th="Cân quy đổi" data-col-seq="6">0</td><td class="text-center" data-th="Cân tính tiền" data-col-seq="7">0.01</td><td data-th="Ngày tạo" data-col-seq="8">08/05/2020 15:18</td><td data-th="Thời gian" data-col-seq="9">08-05-2020 15:18</td><td class="text-center kv-align-middle" data-th="Trạng thái" data-col-seq="10"><span class="label label-success">Đã trả hàng</span></td><td class="text-center" data-col-seq="11">---</td></tr>
+<tr data-key="75160"><td data-th="Mã kiện" data-col-seq="0"><a class="text-blue" target="_blank" href="/don-hang-view-93825#shop-85385"><b>4305158134742</b></a></td><td data-th="Mã ĐH" data-col-seq="1"><a class="underline" target="_blank" href="/don-hang-view-93825"><b>A1960-1067</b></a></td><td class="text-center" data-th="Cân nặng" data-col-seq="2">0 kg</td><td class="text-center" data-th="Dài(cm)" data-col-seq="3">0</td><td class="text-center" data-th="Rộng(cm)" data-col-seq="4">0</td><td class="text-center" data-th="Cao(cm)" data-col-seq="5">0</td><td class="text-center" data-th="Cân quy đổi" data-col-seq="6">0</td><td class="text-center" data-th="Cân tính tiền" data-col-seq="7">0</td><td data-th="Ngày tạo" data-col-seq="8">08/05/2020 15:16</td><td data-th="Thời gian" data-col-seq="9"><span class="not-set">(not set)</span></td><td class="text-center kv-align-middle" data-th="Trạng thái" data-col-seq="10"><span class="label label-info">Đang vận chuyển</span></td><td class="text-center" data-col-seq="11">---</td></tr>
+<tr data-key="75159"><td data-th="Mã kiện" data-col-seq="0"><a class="text-blue" target="_blank" href="/don-hang-view-94350#shop-85852"><b>75347469751364</b></a></td><td data-th="Mã ĐH" data-col-seq="1"><a class="underline" target="_blank" href="/don-hang-view-94350"><b>A320-3253</b></a></td><td class="text-center" data-th="Cân nặng" data-col-seq="2">0 kg</td><td class="text-center" data-th="Dài(cm)" data-col-seq="3">0</td><td class="text-center" data-th="Rộng(cm)" data-col-seq="4">0</td><td class="text-center" data-th="Cao(cm)" data-col-seq="5">0</td><td class="text-center" data-th="Cân quy đổi" data-col-seq="6">0</td><td class="text-center" data-th="Cân tính tiền" data-col-seq="7">0</td><td data-th="Ngày tạo" data-col-seq="8">08/05/2020 15:09</td><td data-th="Thời gian" data-col-seq="9"><span class="not-set">(not set)</span></td><td class="text-center kv-align-middle" data-th="Trạng thái" data-col-seq="10"><span class="label label-info">Đang vận chuyển</span></td><td class="text-center" data-col-seq="11">---</td></tr>
+<tr data-key="75158"><td data-th="Mã kiện" data-col-seq="0"><a class="text-blue" target="_blank" href="/don-hang-view-91923#shop-83770"><b>SF1088620957081-2</b></a></td><td data-th="Mã ĐH" data-col-seq="1"><a class="underline" target="_blank" href="/don-hang-view-91923"><b>A1960-1047</b></a></td><td class="text-center" data-th="Cân nặng" data-col-seq="2">0.01 kg</td><td class="text-center" data-th="Dài(cm)" data-col-seq="3">0</td><td class="text-center" data-th="Rộng(cm)" data-col-seq="4">0</td><td class="text-center" data-th="Cao(cm)" data-col-seq="5">0</td><td class="text-center" data-th="Cân quy đổi" data-col-seq="6">0</td><td class="text-center" data-th="Cân tính tiền" data-col-seq="7">0.01</td><td data-th="Ngày tạo" data-col-seq="8">08/05/2020 14:59</td><td data-th="Thời gian" data-col-seq="9">08-05-2020 14:59</td><td class="text-center kv-align-middle" data-th="Trạng thái" data-col-seq="10"><span class="label label-success">Đã trả hàng</span></td><td class="text-center" data-col-seq="11">---</td></tr>
+<tr data-key="75157"><td data-th="Mã kiện" data-col-seq="0"><a class="text-blue" target="_blank" href="/don-hang-view-90441#shop-82438"><b>689040885633-2</b></a></td><td data-th="Mã ĐH" data-col-seq="1"><a class="underline" target="_blank" href="/don-hang-view-90441"><b>A2902-134</b></a></td><td class="text-center" data-th="Cân nặng" data-col-seq="2">0.01 kg</td><td class="text-center" data-th="Dài(cm)" data-col-seq="3">0</td><td class="text-center" data-th="Rộng(cm)" data-col-seq="4">0</td><td class="text-center" data-th="Cao(cm)" data-col-seq="5">0</td><td class="text-center" data-th="Cân quy đổi" data-col-seq="6">0</td><td class="text-center" data-th="Cân tính tiền" data-col-seq="7">0.01</td><td data-th="Ngày tạo" data-col-seq="8">08/05/2020 14:32</td><td data-th="Thời gian" data-col-seq="9">08-05-2020 14:32</td><td class="text-center kv-align-middle" data-th="Trạng thái" data-col-seq="10"><span class="label label-success">Đã trả hàng</span></td><td class="text-center" data-col-seq="11">---</td></tr>
+<tr data-key="75156"><td data-th="Mã kiện" data-col-seq="0"><a class="text-blue" target="_blank" href="/don-hang-view-91508#shop-83388"><b>SF1009694897348-2</b></a></td><td data-th="Mã ĐH" data-col-seq="1"><a class="underline" target="_blank" href="/don-hang-view-91508"><b>A1960-1043</b></a></td><td class="text-center" data-th="Cân nặng" data-col-seq="2">0.01 kg</td><td class="text-center" data-th="Dài(cm)" data-col-seq="3">0</td><td class="text-center" data-th="Rộng(cm)" data-col-seq="4">0</td><td class="text-center" data-th="Cao(cm)" data-col-seq="5">0</td><td class="text-center" data-th="Cân quy đổi" data-col-seq="6">0</td><td class="text-center" data-th="Cân tính tiền" data-col-seq="7">0.01</td><td data-th="Ngày tạo" data-col-seq="8">08/05/2020 14:30</td><td data-th="Thời gian" data-col-seq="9">08-05-2020 14:30</td><td class="text-center kv-align-middle" data-th="Trạng thái" data-col-seq="10"><span class="label label-success">Đã trả hàng</span></td><td class="text-center" data-col-seq="11">---</td></tr>
+<tr data-key="75155"><td data-th="Mã kiện" data-col-seq="0"><a class="text-blue" target="_blank" href="/don-hang-view-96066#shop-87363"><b>JDX001645283633</b></a></td><td data-th="Mã ĐH" data-col-seq="1"><a class="underline" target="_blank" href="/don-hang-view-96066"><b>A2648-796</b></a></td><td class="text-center" data-th="Cân nặng" data-col-seq="2">0 kg</td><td class="text-center" data-th="Dài(cm)" data-col-seq="3">0</td><td class="text-center" data-th="Rộng(cm)" data-col-seq="4">0</td><td class="text-center" data-th="Cao(cm)" data-col-seq="5">0</td><td class="text-center" data-th="Cân quy đổi" data-col-seq="6">0</td><td class="text-center" data-th="Cân tính tiền" data-col-seq="7">0</td><td data-th="Ngày tạo" data-col-seq="8">08/05/2020 12:47</td><td data-th="Thời gian" data-col-seq="9"><span class="not-set">(not set)</span></td><td class="text-center kv-align-middle" data-th="Trạng thái" data-col-seq="10"><span class="label label-warning">Shop xưởng giao</span></td><td class="text-center" data-col-seq="11">---</td></tr>
+<tr data-key="75154"><td data-th="Mã kiện" data-col-seq="0"><a class="text-blue" target="_blank" href="/don-hang-view-95181#shop-86619"><b>75349344865600</b></a></td><td data-th="Mã ĐH" data-col-seq="1"><a class="underline" target="_blank" href="/don-hang-view-95181"><b>A358-225</b></a></td><td class="text-center" data-th="Cân nặng" data-col-seq="2">0 kg</td><td class="text-center" data-th="Dài(cm)" data-col-seq="3">0</td><td class="text-center" data-th="Rộng(cm)" data-col-seq="4">0</td><td class="text-center" data-th="Cao(cm)" data-col-seq="5">0</td><td class="text-center" data-th="Cân quy đổi" data-col-seq="6">0</td><td class="text-center" data-th="Cân tính tiền" data-col-seq="7">0</td><td data-th="Ngày tạo" data-col-seq="8">08/05/2020 11:56</td><td data-th="Thời gian" data-col-seq="9"><span class="not-set">(not set)</span></td><td class="text-center kv-align-middle" data-th="Trạng thái" data-col-seq="10"><span class="label label-warning">Shop xưởng giao</span></td><td class="text-center" data-col-seq="11">---</td></tr>
+</tbody></table></div>
+    <div class="kv-panel-after"></div>
+    <div class="panel-footer">    <div class="kv-panel-pager">
+        <ul class="pagination"><li class="prev disabled"><span>&laquo;</span></li>
+<li class="active"><a href="/transfercode/index?page=1" data-page="0">1</a></li>
+<li><a href="/transfercode/index?page=2" data-page="1">2</a></li>
+<li><a href="/transfercode/index?page=3" data-page="2">3</a></li>
+<li><a href="/transfercode/index?page=4" data-page="3">4</a></li>
+<li><a href="/transfercode/index?page=5" data-page="4">5</a></li>
+<li><a href="/transfercode/index?page=6" data-page="5">6</a></li>
+<li><a href="/transfercode/index?page=7" data-page="6">7</a></li>
+<li><a href="/transfercode/index?page=8" data-page="7">8</a></li>
+<li><a href="/transfercode/index?page=9" data-page="8">9</a></li>
+<li><a href="/transfercode/index?page=10" data-page="9">10</a></li>
+<li class="next"><a href="/transfercode/index?page=2" data-page="1">&raquo;</a></li></ul>
+    </div>
+    
+    <div class="clearfix"></div></div>
+</div></div>    </div>
+</div>
+<!--<td><a href="" class="update" data-name="name" data-type="text" data-pk="--><!--" data-title="Enter name">--><!--</a></td>-->
+<!--<td><a href="" class="update" data-name="email" data-type="email" data-pk="--><!--" data-title="Enter email">--><!--</a></td>-->
+<!--<td><button class="btn btn-danger btn-sm">Delete</button></td>-->
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 2.3.0
+            </div>
+            <strong>Copyright &copy; 2014-2015.</strong> All rights reserved.
+        </footer>
+    </div>
+
+  <script src="/assets/298354ee/dist/js/bootstrap-dialog.min.js"></script>
+<script src="/assets/116fe791/yii.js"></script>
+<script src="/assets/1472305f/js/dialog-yii.min.js"></script>
+<script src="/assets/95c3371/js/kv-grid-export.min.js"></script>
+<script src="/assets/95c3371/js/jquery.resizableColumns.min.js"></script>
+<script src="/assets/95c3371/js/kv-grid-toggle.min.js"></script>
+<script src="/assets/116fe791/yii.gridView.js"></script>
+<script src="/assets/837aee75/js/select2.full.min.js"></script>
+<script src="/assets/837aee75/js/select2-krajee.min.js"></script>
+<script src="/assets/65ca6bf3/js/kv-widgets.min.js"></script>
+<script src="/plugins/select2/select2.js"></script>
+<script src="/js/moment-with-locales.js"></script>
+<script src="/plugins/datepicker/bootstrap-datepicker.js"></script>
+<script src="/plugins/iCheck/icheck.min.js"></script>
+<script src="/js/bootstrap-toggle.js"></script>
+<script src="/js/app.min.js"></script>
+<script src="/js/users.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/notify.js"></script>
+<script src="/js/chatbox.js"></script>
+<script src="/js/simple.money.format.js"></script>
+<script type="text/javascript">jQuery(document).ready(function () {
+krajeeYiiConfirm('krajeeDialog');
+var kvGridInit_d021252f=function(){
+jQuery('#w0 .export-html').gridexport(kvGridExp_fb069215);jQuery('#w0 .export-csv').gridexport(kvGridExp_158f4d98);jQuery('#w0 .export-txt').gridexport(kvGridExp_0a35c183);jQuery('#w0 .export-xls').gridexport(kvGridExp_368e0eaa);jQuery('#w0 .export-json').gridexport(kvGridExp_6463fc66);jQuery("#w0-container").resizableColumns('destroy').resizableColumns({"store":null,"resizeFromBody":false});kvToggleData(kvTogOpts_b8f5f61e);
+};
+kvGridInit_d021252f();
+jQuery('#w2').dropdown();
+jQuery('#w0').yiiGridView({"filterUrl":"\/transfercode\/index","filterSelector":"#w0-filters input, #w0-filters select"});
+if (jQuery('#tbtransfercodesearch-shipstatus').data('select2')) { jQuery('#tbtransfercodesearch-shipstatus').select2('destroy'); }
+jQuery.when(jQuery('#tbtransfercodesearch-shipstatus').select2(select2_708bdab4)).done(initS2Loading('tbtransfercodesearch-shipstatus','s2options_d6851687'));
+
+});</script>  <!-- modal -->
+  <div class="modal " id="myModal" style="display: none;">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close btn-close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h3 class="modal-title" id="exampleModalLabel">Thông báo</h3>
+              </div>
+              <div class="modal-body">
+                  <div class="modal-container"></div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-default pull-right btn-close" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+        $.ajax({
+             url: 'https://thietkewebos.com/thong-bao.html',
+              type: 'get',             
+              dataType: "json", 
+              success: function (rs) {
+                  if (rs.status) {
+                      $('#myModal').modal('show');
+                      $('.modal-container').html(rs.view);
+                  } 
+
+              }
+          });
+
+    });
+
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $("#myModal").modal({
+            show: false,
+            backdrop: 'static'
+        });
+        $('.btn-close').on('click',function(){
+            $('input[id=orderNumber]').focus();  
+        });       
+    });
+  </script>
+  </body>
+</html>

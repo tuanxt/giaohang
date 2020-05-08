@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Lịch sử người dùng</title>
+    <link href="/assets/d0461e8f/css/bootstrap.css" rel="stylesheet">
+<link href="/assets/95c3371/css/kv-grid.min.css" rel="stylesheet">
+<link href="/assets/298354ee/dist/css/bootstrap-dialog.min.css" rel="stylesheet">
+<link href="/assets/95c3371/css/jquery.resizableColumns.min.css" rel="stylesheet">
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="/plugins/select2/select2.css" rel="stylesheet">
+<link href="/plugins/iCheck/minimal/blue.css" rel="stylesheet">
+<link href="/plugins/datepicker/datepicker3.css" rel="stylesheet">
+<link href="/css/skins/_all-skins.min.css" rel="stylesheet">
+<link href="/css/bootstrap-toggle.css" rel="stylesheet">
+<link href="/css/layout.css" rel="stylesheet">
+<style>.bootstrap-dialog .modal-header.bootstrap-dialog-draggable{cursor:move}</style>
+<script src="/assets/1472305f/js/dialog.min.js"></script>
+<script type="text/javascript">var krajeeDialogDefaults_71c625b2 = {"alert":{"type":"type-info","title":"Information","buttonLabel":"<span class=\"glyphicon glyphicon-ok\"></span> Ok"},"confirm":{"type":"type-warning","title":"Confirmation","btnOKClass":"btn-warning","btnOKLabel":"<span class=\"glyphicon glyphicon-ok\"></span> Ok","btnCancelLabel":"<span class=\"glyphicon glyphicon-ban-circle\"></span> Cancel"},"prompt":{"draggable":false,"title":"Information","buttons":[{"label":"Cancel","icon":"glyphicon glyphicon-ban-circle"},{"label":"Ok","icon":"glyphicon glyphicon-ok","cssClass":"btn-primary"}],"closable":false},"dialog":{"draggable":true,"title":"Information","buttons":[{"label":"Cancel","icon":"glyphicon glyphicon-ban-circle"},{"label":"Ok","icon":"glyphicon glyphicon-ok","cssClass":"btn-primary"}]}};
+var krajeeDialog_e48a4427 = {"id":"w1"};
+var krajeeDialog=new KrajeeDialog(true,krajeeDialog_e48a4427,krajeeDialogDefaults_71c625b2);
+var kvGridExp_e0dd3dff={"gridId":"w0","target":"_blank","messages":{"allowPopups":"Disable any popup blockers in your browser to ensure proper download.","confirmDownload":"Ok to proceed?","downloadProgress":"Generating the export file. Please wait...","downloadComplete":"Request submitted! You may safely close this dialog after saving your downloaded file."},"exportConversions":[{"from":"<span class=\"glyphicon glyphicon-ok text-success\"></span>","to":"Active"},{"from":"<span class=\"glyphicon glyphicon-remove text-danger\"></span>","to":"Inactive"}],"showConfirmAlert":true};
+var kvGridExp_12735912={"filename":"grid-export","showHeader":true,"showPageSummary":true,"showFooter":true};
+var kvGridExp_fb069215={"dialogLib":"krajeeDialog","gridOpts":kvGridExp_e0dd3dff,"genOpts":kvGridExp_12735912,"alertMsg":"The HTML export file will be generated for download.","config":{"cssFile":"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"}};
+var kvGridExp_158f4d98={"dialogLib":"krajeeDialog","gridOpts":kvGridExp_e0dd3dff,"genOpts":kvGridExp_12735912,"alertMsg":"The CSV export file will be generated for download.","config":{"colDelimiter":",","rowDelimiter":"\r\n"}};
+var kvGridExp_0a35c183={"dialogLib":"krajeeDialog","gridOpts":kvGridExp_e0dd3dff,"genOpts":kvGridExp_12735912,"alertMsg":"The TEXT export file will be generated for download.","config":{"colDelimiter":"\t","rowDelimiter":"\r\n"}};
+var kvGridExp_368e0eaa={"dialogLib":"krajeeDialog","gridOpts":kvGridExp_e0dd3dff,"genOpts":kvGridExp_12735912,"alertMsg":"The EXCEL export file will be generated for download.","config":{"worksheet":"ExportWorksheet","cssFile":""}};
+var kvGridExp_6463fc66={"dialogLib":"krajeeDialog","gridOpts":kvGridExp_e0dd3dff,"genOpts":kvGridExp_12735912,"alertMsg":"The JSON export file will be generated for download.","config":{"colHeads":[],"slugColHeads":false,"jsonReplacer":function(k,v){return typeof(v)==='string'?$.trim(v):v},"indentSpace":4}};
+kvTogOpts_ef5bd288={"id":"w0-togdata-page","pjax":1,"mode":"page","msg":"There are 28,029 records. Are you sure you want to display them all?","lib":krajeeDialog};</script>      <script>
+          var homeUrl = 'https://nguonhang24h.vn';
+          var baseUrl = 'http://cms.nguonhang24h.vn';
+      </script>
+      <script src="/js/jQuery-2.1.4.min.js"></script>
+      <script src="/bootstrap/js/bootstrap.js"></script>
+      <script src="/js/main.js"></script>
+  </head>
+  <body class="skin-blue sidebar-mini wysihtml5-supported">
+           <div class="wrapper">
+        <header class="main-header">
+    <!-- Logo -->
+    <a href="/" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>H</b>S</span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><b>HS</b> PANEL</span>
+    </a>
+
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top" role="navigation">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+        </a>
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <li class="dropdown messages-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="label label-success">4</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">You have 4 messages</li>
+                        <li>
+                            <!-- inner menu: contains the actual data -->
+                            <ul class="menu">
+                                <li><!-- start message -->
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="/images/admin.png" class="img-circle" alt="User Image">
+                                        </div>
+                                        <h4>
+                                            Support Team
+                                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                        </h4>
+                                        <p>Why not buy a new awesome theme?</p>
+                                    </a>
+                                </li>
+                                <!-- end message -->
+                                <li>
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="/images/admin.png" class="img-circle" alt="User Image">
+                                        </div>
+                                        <h4>
+                                            AdminLTE Design Team
+                                            <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                                        </h4>
+                                        <p>Why not buy a new awesome theme?</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="/images/admin.png" class="img-circle" alt="User Image">
+                                        </div>
+                                        <h4>
+                                            Developers
+                                            <small><i class="fa fa-clock-o"></i> Today</small>
+                                        </h4>
+                                        <p>Why not buy a new awesome theme?</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="/images/admin.png" class="img-circle" alt="User Image">
+                                        </div>
+                                        <h4>
+                                            Sales Department
+                                            <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                                        </h4>
+                                        <p>Why not buy a new awesome theme?</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="/images/admin.png" class="img-circle" alt="User Image">
+                                        </div>
+                                        <h4>
+                                            Reviewers
+                                            <small><i class="fa fa-clock-o"></i> 2 days</small>
+                                        </h4>
+                                        <p>Why not buy a new awesome theme?</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer"><a href="#">See All Messages</a></li>
+                    </ul>
+                </li>
+                <!-- Notifications: style can be found in dropdown.less -->
+                <li class="dropdown notifications-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-bell-o"></i>
+                        <span class="label label-warning">10</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">You have 10 notifications</li>
+                        <li>
+                            <!-- inner menu: contains the actual data -->
+                            <ul class="menu">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
+                                        page and may cause design problems
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-users text-red"></i> 5 new members joined
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-user text-red"></i> You changed your username
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer"><a href="#">View all</a></li>
+                    </ul>
+                </li>
+
+
+                                    <li><a target="_blank" href="https://nguonhang24h.vn" class="pull-left"><i class="glyphicon glyphicon-home"></i> Open site</a>  </li>
+                    <li>
+                        <a href="/sign/out"><i class="glyphicon glyphicon-log-out"></i> Logout</a>
+                    </li>
+                            </ul>
+        </div>
+
+    </nav>
+</header>        <!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="/images/admin.png" class="img-circle" alt="">
+            </div>
+            <div class="pull-left info">
+                <p>adminkhovn</p>
+                <a href="javascript:void(0)"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+        </div>
+        <ul class="sidebar-menu">
+            <li class="header">MAIN NAVIGATION</li>
+            <li class="">
+                <a href="/"> <i class="fa fa-dashboard"></i>
+                    <span>Dashboard</span> <!--<i class="fa fa-angle-left pull-right"></i>-->
+                </a>
+            </li>
+                                                <li class="treeview ">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>                            <span> Quản lý đơn hàng</span>
+                                                            <i class="fa fa-angle-left pull-right"></i>
+                                                    </a>
+                                                    <ul class="treeview-menu ">
+                                                                    <li class="">
+                                        <a href="/orders/index">
+                                            <i class="fa fa-circle-o"></i>                                            Tất cả đơn hàng                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                            </ul>
+                                            </li>
+                                    <li class="treeview ">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>                            <span> Quản lý kho</span>
+                                                            <i class="fa fa-angle-left pull-right"></i>
+                                                    </a>
+                                                    <ul class="treeview-menu ">
+                                                                    <li class="">
+                                        <a href="/shipping/barcode">
+                                            <i class="fa fa-money" aria-hidden="true"></i>                                            Kho nhập mã vận đơn                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                                    <li class="">
+                                        <a href="/lo/index">
+                                            <i aria-hidden="true" class="glyphicon glyphicon-file"></i>                                            QL Phiếu xuất kho                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                                    <li class="">
+                                        <a href="/bag/index">
+                                            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>                                            Quản lý bao                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                                    <li class="">
+                                        <a href="/transfercode/index">
+                                            <i aria-hidden="true" class="glyphicon glyphicon-file"></i>                                            Quản lý mã vận đơn                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                            </ul>
+                                            </li>
+                                    <li class="treeview active">
+                        <a href="/history/index">
+                            <i class="fa fa-history" aria-hidden="true"></i>                            <span> Lịch sử người dùng</span>
+                                                    </a>
+                                            </li>
+                                    <li class="treeview ">
+                        <a href="javascript:void(0)">
+                            <i aria-hidden="true" class="glyphicon glyphicon-user"></i>                            <span> Thông tin tài khoản</span>
+                                                            <i class="fa fa-angle-left pull-right"></i>
+                                                    </a>
+                                                    <ul class="treeview-menu ">
+                                                                    <li class="">
+                                        <a href="/user/my-profile">
+                                            <i aria-hidden="true" class="glyphicon glyphicon-lock"></i>                                            Hồ sơ                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                                    <li class="">
+                                        <a href="/user/change-password">
+                                            <i aria-hidden="true" class="glyphicon glyphicon-lock"></i>                                            Thay đổi mật khẩu                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                            </ul>
+                                            </li>
+                        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>        <div class="content-wrapper">
+            <section class="content-header">
+                <ol class="breadcrumb"><li><a href="/">Home</a></li>
+<li class="active">Lịch sử người dùng</li>
+</ol>            </section>
+            <section class="content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="tb-history-index">
+    
+<div class="tb-orders-search clear">
+    <div class="tb-orders-search">
+        <form id="order-search-form" action="/history/index" method="get">
+        <div class="form-text ext-full">
+            <div class="form-group field-startDate">
+<div class="input-group"><div class="input-group-addon"><i class="fa fa-calendar"></i> </div><input type="text" id="startDate" class="form-control" name="TbHistorySearch[startDate]" placeholder="Từ ngày"></div>
+</div>        </div>
+        <div class="form-text ext-full">
+            <div class="form-group field-endDate">
+<div class="input-group"><div class="input-group-addon"><i class="fa fa-calendar"></i> </div><input type="text" id="endDate" class="form-control" name="TbHistorySearch[endDate]" placeholder="Đến ngày"></div>
+</div>        </div>
+        <div class="form-text ext-full">
+            <div class="form-group field-tbhistorysearch-userid">
+
+<select id="tbhistorysearch-userid" class="form-control select2" name="TbHistorySearch[userID]" style="width:100%" data-placeholder="Chọn nhân viên">
+<option value=""></option>
+<option value="242">adminhcm</option>
+<option value="244">thuyhcm24h</option>
+<option value="208">hoangminhad24h</option>
+<option value="253">hakhau24h</option>
+<option value="171">admin24h</option>
+<option value="169">khovn</option>
+<option value="168">khotq</option>
+<option value="254">huongkd24h</option>
+<option value="248">ngmaikd24h</option>
+<option value="222">thanhmaikd24h</option>
+<option value="180">hai2018</option>
+<option value="181">nvdathang</option>
+<option value="182">adminkhovn</option>
+<option value="183">adminkhotq</option>
+<option value="184">dungkd24h</option>
+<option value="185">thamkt24h</option>
+<option value="189">hoangkd24h</option>
+<option value="190">lahangkd24h</option>
+<option value="243">dhhcm</option>
+<option value="256">thaotrinhkdhcm</option>
+<option value="239">nhungdh24h</option>
+<option value="195">sondh24h</option>
+<option value="233">hangdh24h</option>
+<option value="199">kenkd24h</option>
+<option value="235">nhikd24h</option>
+<option value="202">huongdh24h</option>
+<option value="258">Viettung24h</option>
+<option value="259">ngochuankd24h</option>
+<option value="262">anhkd24h</option>
+<option value="218">maikd24h</option>
+<option value="237">linhkdhcm24h</option>
+<option value="221">cskh24h</option>
+<option value="238">thaokdhcm24h</option>
+<option value="228">ladungkd24h</option>
+<option value="246">hieukd24h</option>
+<option value="230">hieuminhkd24h</option>
+<option value="231">dotienkd24h</option>
+<option value="245">tungadmin24h</option>
+<option value="249">vietkd24h</option>
+<option value="255">cuongkd24h</option>
+<option value="252">admin</option>
+<option value="257">huyenkd24h</option>
+<option value="261">diukd24h</option>
+<option value="270">huongkt24h</option>
+<option value="263">ktoan</option>
+<option value="271">Hakt24h</option>
+<option value="265">tienhuynhkdhcm</option>
+<option value="266">dhtest</option>
+<option value="272">tienkd24h</option>
+<option value="267">thaolykdhcm24h</option>
+<option value="268">quynhkd24h</option>
+<option value="269">nguyetanh24h</option>
+<option value="274">phuckd24h</option>
+<option value="273">trangkdhcm24h</option>
+<option value="275">tienlehcm24h</option>
+</select>
+
+<div class="help-block"></div>
+</div>        </div>
+
+        <div class="form-text ext-full">
+            <button type="submit" id="btn-search-order" name="op" value="Tìm kiếm" class="btn btn-primary">
+                <i class="fa fa-search" aria-hidden="true"></i> Tìm kiếm
+            </button>
+        </div>
+        </form>    </div>
+</div>
+<div class="clear"></div>
+
+    <br>
+    <div id="w0-pjax" data-pjax-container="" data-pjax-push-state data-pjax-timeout="1000"><div class="kv-loader-overlay"><div class="kv-loader"></div></div><div id="w0" class="grid-view hide-resize" data-krajee-grid="kvGridInit_75b2bf46"><div class="panel panel-primary">
+    <div class="panel-heading">    <div class="pull-right">
+        <div class="summary">Showing <b>1-20</b> of <b>28,029</b> items.</div>
+    </div>
+    <h3 class="panel-title">
+        <h3 class="panel-title"><i class="fa fa-history" aria-hidden="true"></i> Lịch sử người dùng </h3>
+    </h3>
+    <div class="clearfix"></div></div>
+    <div class="kv-panel-before">    <div class="btn-toolbar kv-grid-toolbar toolbar-container pull-right"><div class="btn-group"><a class="btn btn-default" href="/orders/index" title="Reset Grid"><i class="glyphicon glyphicon-repeat"></i></a></div></div>
+    
+    <div class="clearfix"></div></div>
+    <div id="w0-container" class="table-responsive kv-grid-container"><table id="tbl_manager" class="table table-bordered table-hover dataTable kv-grid-table table-striped kv-table-wrap"><thead>
+
+<tr><th style="width: 15%;" data-col-seq="0"><a href="/history/index?sort=orderID" data-sort="orderID">Mã đơn hàng</a></th><th data-col-seq="1"><a href="/history/index?sort=userID" data-sort="userID">Nhân viên tạo</a></th><th style="width: 40%;" data-col-seq="2">Nội dung</th><th style="width: 15%;" data-col-seq="3"><a class="desc" href="/history/index?sort=createDate" data-sort="createDate">Ngày giờ</a></th><th class="text-right" style="width: 8%;" data-col-seq="4">Thao tác</th></tr><tr id="w0-filters" class="filters skip-export"><td></td><td></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+</thead>
+<tbody>
+<tr data-key="314093"><td data-th="Mã đơn hàng" data-col-seq="0">A1960-1049</td><td data-th="Nhân viên" data-col-seq="1"> <a target="_blank"  title="Chi tiết nhân viên" href="/user/182"><i class="fa fa-eye" aria-hidden="true"></i> Kho Hà Nội(<i>adminkhovn</i>)</a></td><td data-th="Nội dung" data-col-seq="2">Quản trị: <b>adminkhovn</b><br/>Cập nhật thông tin kiện: <b>SF1021280114007-2</b><br/>Mã đơn hàng: <b>A1960-1049</b><br></td><td data-th="Ngày giờ" data-col-seq="3">08-05-2020 04:19:01</td><td class="text-right" data-col-seq="4"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                        <li><a href="/history/314093" ><span class="glyphicon glyphicon-eye-open"></span> Chi tiết</a></li>                        
+                         
+                    </ul>
+                </div></td></tr>
+<tr data-key="314092"><td data-th="Mã đơn hàng" data-col-seq="0">A1960-1049</td><td data-th="Nhân viên" data-col-seq="1"> <a target="_blank"  title="Chi tiết nhân viên" href="/user/182"><i class="fa fa-eye" aria-hidden="true"></i> Kho Hà Nội(<i>adminkhovn</i>)</a></td><td data-th="Nội dung" data-col-seq="2">Quản trị: <b>adminkhovn</b><br/>Cập nhật thông tin kiện: <b>SF1021280114007-2</b><br/>Mã đơn hàng: <b>A1960-1049</b><br>Thay đổi cân nặng thực tế: <b>0</b>kg thành <b>0.01</b>kg <br></td><td data-th="Ngày giờ" data-col-seq="3">08-05-2020 04:18:56</td><td class="text-right" data-col-seq="4"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                        <li><a href="/history/314092" ><span class="glyphicon glyphicon-eye-open"></span> Chi tiết</a></li>                        
+                         
+                    </ul>
+                </div></td></tr>
+<tr data-key="314047"><td data-th="Mã đơn hàng" data-col-seq="0">A1960-1047</td><td data-th="Nhân viên" data-col-seq="1"> <a target="_blank"  title="Chi tiết nhân viên" href="/user/182"><i class="fa fa-eye" aria-hidden="true"></i> Kho Hà Nội(<i>adminkhovn</i>)</a></td><td data-th="Nội dung" data-col-seq="2">Quản trị: <b>adminkhovn</b><br/>Cập nhật thông tin kiện: <b>SF1088620957081-2</b><br/>Mã đơn hàng: <b>A1960-1047</b><br></td><td data-th="Ngày giờ" data-col-seq="3">08-05-2020 03:59:45</td><td class="text-right" data-col-seq="4"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                        <li><a href="/history/314047" ><span class="glyphicon glyphicon-eye-open"></span> Chi tiết</a></li>                        
+                         
+                    </ul>
+                </div></td></tr>
+<tr data-key="314046"><td data-th="Mã đơn hàng" data-col-seq="0">A1960-1047</td><td data-th="Nhân viên" data-col-seq="1"> <a target="_blank"  title="Chi tiết nhân viên" href="/user/182"><i class="fa fa-eye" aria-hidden="true"></i> Kho Hà Nội(<i>adminkhovn</i>)</a></td><td data-th="Nội dung" data-col-seq="2">Quản trị: <b>adminkhovn</b><br/>Cập nhật thông tin kiện: <b>SF1088620957081-2</b><br/>Mã đơn hàng: <b>A1960-1047</b><br>Thay đổi cân nặng thực tế: <b>0</b>kg thành <b>0.01</b>kg <br></td><td data-th="Ngày giờ" data-col-seq="3">08-05-2020 03:59:40</td><td class="text-right" data-col-seq="4"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                        <li><a href="/history/314046" ><span class="glyphicon glyphicon-eye-open"></span> Chi tiết</a></li>                        
+                         
+                    </ul>
+                </div></td></tr>
+<tr data-key="314031"><td data-th="Mã đơn hàng" data-col-seq="0">A2833-129</td><td data-th="Nhân viên" data-col-seq="1"> <a target="_blank"  title="Chi tiết nhân viên" href="/user/182"><i class="fa fa-eye" aria-hidden="true"></i> Kho Hà Nội(<i>adminkhovn</i>)</a></td><td data-th="Nội dung" data-col-seq="2">Quản trị: <b>adminkhovn</b><br/>Cập nhật thông tin kiện: <b>319139051847</b><br/>Mã đơn hàng: <b>A2833-129</b><br></td><td data-th="Ngày giờ" data-col-seq="3">08-05-2020 03:52:20</td><td class="text-right" data-col-seq="4"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                        <li><a href="/history/314031" ><span class="glyphicon glyphicon-eye-open"></span> Chi tiết</a></li>                        
+                         
+                    </ul>
+                </div></td></tr>
+<tr data-key="314030"><td data-th="Mã đơn hàng" data-col-seq="0">A2833-129</td><td data-th="Nhân viên" data-col-seq="1"> <a target="_blank"  title="Chi tiết nhân viên" href="/user/182"><i class="fa fa-eye" aria-hidden="true"></i> Kho Hà Nội(<i>adminkhovn</i>)</a></td><td data-th="Nội dung" data-col-seq="2">Quản trị: <b>adminkhovn</b><br/>Cập nhật thông tin kiện: <b>518860883321</b><br/>Mã đơn hàng: <b>A2833-129</b><br></td><td data-th="Ngày giờ" data-col-seq="3">08-05-2020 03:52:15</td><td class="text-right" data-col-seq="4"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                        <li><a href="/history/314030" ><span class="glyphicon glyphicon-eye-open"></span> Chi tiết</a></li>                        
+                         
+                    </ul>
+                </div></td></tr>
+<tr data-key="314029"><td data-th="Mã đơn hàng" data-col-seq="0">A2833-128</td><td data-th="Nhân viên" data-col-seq="1"> <a target="_blank"  title="Chi tiết nhân viên" href="/user/182"><i class="fa fa-eye" aria-hidden="true"></i> Kho Hà Nội(<i>adminkhovn</i>)</a></td><td data-th="Nội dung" data-col-seq="2">Quản trị: <b>adminkhovn</b><br/>Cập nhật thông tin kiện: <b>4304961132262</b><br/>Mã đơn hàng: <b>A2833-128</b><br></td><td data-th="Ngày giờ" data-col-seq="3">08-05-2020 03:52:12</td><td class="text-right" data-col-seq="4"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                        <li><a href="/history/314029" ><span class="glyphicon glyphicon-eye-open"></span> Chi tiết</a></li>                        
+                         
+                    </ul>
+                </div></td></tr>
+<tr data-key="314028"><td data-th="Mã đơn hàng" data-col-seq="0">A2833-127</td><td data-th="Nhân viên" data-col-seq="1"> <a target="_blank"  title="Chi tiết nhân viên" href="/user/182"><i class="fa fa-eye" aria-hidden="true"></i> Kho Hà Nội(<i>adminkhovn</i>)</a></td><td data-th="Nội dung" data-col-seq="2">Quản trị: <b>adminkhovn</b><br/>Cập nhật thông tin kiện: <b>4304890200862</b><br/>Mã đơn hàng: <b>A2833-127</b><br></td><td data-th="Ngày giờ" data-col-seq="3">08-05-2020 03:52:08</td><td class="text-right" data-col-seq="4"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                        <li><a href="/history/314028" ><span class="glyphicon glyphicon-eye-open"></span> Chi tiết</a></li>                        
+                         
+                    </ul>
+                </div></td></tr>
+<tr data-key="314027"><td data-th="Mã đơn hàng" data-col-seq="0">A2833-125</td><td data-th="Nhân viên" data-col-seq="1"> <a target="_blank"  title="Chi tiết nhân viên" href="/user/182"><i class="fa fa-eye" aria-hidden="true"></i> Kho Hà Nội(<i>adminkhovn</i>)</a></td><td data-th="Nội dung" data-col-seq="2">Quản trị: <b>adminkhovn</b><br/>Cập nhật thông tin kiện: <b>4304849615621</b><br/>Mã đơn hàng: <b>A2833-125</b><br></td><td data-th="Ngày giờ" data-col-seq="3">08-05-2020 03:52:06</td><td class="text-right" data-col-seq="4"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                        <li><a href="/history/314027" ><span class="glyphicon glyphicon-eye-open"></span> Chi tiết</a></li>                        
+                         
+                    </ul>
+                </div></td></tr>
+<tr data-key="313990"><td data-th="Mã đơn hàng" data-col-seq="0">A2902-129</td><td data-th="Nhân viên" data-col-seq="1"> <a target="_blank"  title="Chi tiết nhân viên" href="/user/182"><i class="fa fa-eye" aria-hidden="true"></i> Kho Hà Nội(<i>adminkhovn</i>)</a></td><td data-th="Nội dung" data-col-seq="2">Quản trị: <b>adminkhovn</b><br/>Cập nhật thông tin kiện: <b>YT4458075948781</b><br/>Mã đơn hàng: <b>A2902-129</b><br></td><td data-th="Ngày giờ" data-col-seq="3">08-05-2020 03:33:20</td><td class="text-right" data-col-seq="4"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                        <li><a href="/history/313990" ><span class="glyphicon glyphicon-eye-open"></span> Chi tiết</a></li>                        
+                         
+                    </ul>
+                </div></td></tr>
+<tr data-key="313991"><td data-th="Mã đơn hàng" data-col-seq="0">A2902-129</td><td data-th="Nhân viên" data-col-seq="1"> <a target="_blank"  title="Chi tiết nhân viên" href="/user/182"><i class="fa fa-eye" aria-hidden="true"></i> Kho Hà Nội(<i>adminkhovn</i>)</a></td><td data-th="Nội dung" data-col-seq="2">Quản trị: <b>adminkhovn</b><br/>Cập nhật thông tin kiện: <b>YT4458075948882</b><br/>Mã đơn hàng: <b>A2902-129</b><br></td><td data-th="Ngày giờ" data-col-seq="3">08-05-2020 03:33:20</td><td class="text-right" data-col-seq="4"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                        <li><a href="/history/313991" ><span class="glyphicon glyphicon-eye-open"></span> Chi tiết</a></li>                        
+                         
+                    </ul>
+                </div></td></tr>
+<tr data-key="313989"><td data-th="Mã đơn hàng" data-col-seq="0">A2902-146</td><td data-th="Nhân viên" data-col-seq="1"> <a target="_blank"  title="Chi tiết nhân viên" href="/user/182"><i class="fa fa-eye" aria-hidden="true"></i> Kho Hà Nội(<i>adminkhovn</i>)</a></td><td data-th="Nội dung" data-col-seq="2">Quản trị: <b>adminkhovn</b><br/>Cập nhật thông tin kiện: <b>518846551593</b><br/>Mã đơn hàng: <b>A2902-146</b><br></td><td data-th="Ngày giờ" data-col-seq="3">08-05-2020 03:33:18</td><td class="text-right" data-col-seq="4"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                        <li><a href="/history/313989" ><span class="glyphicon glyphicon-eye-open"></span> Chi tiết</a></li>                        
+                         
+                    </ul>
+                </div></td></tr>
+<tr data-key="313988"><td data-th="Mã đơn hàng" data-col-seq="0">A2902-134</td><td data-th="Nhân viên" data-col-seq="1"> <a target="_blank"  title="Chi tiết nhân viên" href="/user/182"><i class="fa fa-eye" aria-hidden="true"></i> Kho Hà Nội(<i>adminkhovn</i>)</a></td><td data-th="Nội dung" data-col-seq="2">Quản trị: <b>adminkhovn</b><br/>Cập nhật thông tin kiện: <b>689040885633-2</b><br/>Mã đơn hàng: <b>A2902-134</b><br></td><td data-th="Ngày giờ" data-col-seq="3">08-05-2020 03:33:06</td><td class="text-right" data-col-seq="4"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                        <li><a href="/history/313988" ><span class="glyphicon glyphicon-eye-open"></span> Chi tiết</a></li>                        
+                         
+                    </ul>
+                </div></td></tr>
+<tr data-key="313987"><td data-th="Mã đơn hàng" data-col-seq="0">A2902-134</td><td data-th="Nhân viên" data-col-seq="1"> <a target="_blank"  title="Chi tiết nhân viên" href="/user/182"><i class="fa fa-eye" aria-hidden="true"></i> Kho Hà Nội(<i>adminkhovn</i>)</a></td><td data-th="Nội dung" data-col-seq="2">Quản trị: <b>adminkhovn</b><br/>Cập nhật thông tin kiện: <b>689040885633-2</b><br/>Mã đơn hàng: <b>A2902-134</b><br>Thay đổi cân nặng thực tế: <b>0</b>kg thành <b>0.01</b>kg <br></td><td data-th="Ngày giờ" data-col-seq="3">08-05-2020 03:33:00</td><td class="text-right" data-col-seq="4"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                        <li><a href="/history/313987" ><span class="glyphicon glyphicon-eye-open"></span> Chi tiết</a></li>                        
+                         
+                    </ul>
+                </div></td></tr>
+<tr data-key="313977"><td data-th="Mã đơn hàng" data-col-seq="0">A1960-1065</td><td data-th="Nhân viên" data-col-seq="1"> <a target="_blank"  title="Chi tiết nhân viên" href="/user/182"><i class="fa fa-eye" aria-hidden="true"></i> Kho Hà Nội(<i>adminkhovn</i>)</a></td><td data-th="Nội dung" data-col-seq="2">Quản trị: <b>adminkhovn</b><br/>Cập nhật thông tin kiện: <b>YT4478341443899</b><br/>Mã đơn hàng: <b>A1960-1065</b><br></td><td data-th="Ngày giờ" data-col-seq="3">08-05-2020 03:31:14</td><td class="text-right" data-col-seq="4"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                        <li><a href="/history/313977" ><span class="glyphicon glyphicon-eye-open"></span> Chi tiết</a></li>                        
+                         
+                    </ul>
+                </div></td></tr>
+<tr data-key="313978"><td data-th="Mã đơn hàng" data-col-seq="0">A1960-1063</td><td data-th="Nhân viên" data-col-seq="1"> <a target="_blank"  title="Chi tiết nhân viên" href="/user/182"><i class="fa fa-eye" aria-hidden="true"></i> Kho Hà Nội(<i>adminkhovn</i>)</a></td><td data-th="Nội dung" data-col-seq="2">Quản trị: <b>adminkhovn</b><br/>Cập nhật thông tin kiện: <b>YT4477237394261</b><br/>Mã đơn hàng: <b>A1960-1063</b><br></td><td data-th="Ngày giờ" data-col-seq="3">08-05-2020 03:31:14</td><td class="text-right" data-col-seq="4"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                        <li><a href="/history/313978" ><span class="glyphicon glyphicon-eye-open"></span> Chi tiết</a></li>                        
+                         
+                    </ul>
+                </div></td></tr>
+<tr data-key="313976"><td data-th="Mã đơn hàng" data-col-seq="0">A1960-1043</td><td data-th="Nhân viên" data-col-seq="1"> <a target="_blank"  title="Chi tiết nhân viên" href="/user/182"><i class="fa fa-eye" aria-hidden="true"></i> Kho Hà Nội(<i>adminkhovn</i>)</a></td><td data-th="Nội dung" data-col-seq="2">Quản trị: <b>adminkhovn</b><br/>Cập nhật thông tin kiện: <b>SF1009694897348-2</b><br/>Mã đơn hàng: <b>A1960-1043</b><br></td><td data-th="Ngày giờ" data-col-seq="3">08-05-2020 03:30:27</td><td class="text-right" data-col-seq="4"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                        <li><a href="/history/313976" ><span class="glyphicon glyphicon-eye-open"></span> Chi tiết</a></li>                        
+                         
+                    </ul>
+                </div></td></tr>
+<tr data-key="313975"><td data-th="Mã đơn hàng" data-col-seq="0">A1960-1043</td><td data-th="Nhân viên" data-col-seq="1"> <a target="_blank"  title="Chi tiết nhân viên" href="/user/182"><i class="fa fa-eye" aria-hidden="true"></i> Kho Hà Nội(<i>adminkhovn</i>)</a></td><td data-th="Nội dung" data-col-seq="2">Quản trị: <b>adminkhovn</b><br/>Cập nhật thông tin kiện: <b>SF1009694897348-2</b><br/>Mã đơn hàng: <b>A1960-1043</b><br>Thay đổi cân nặng thực tế: <b>0</b>kg thành <b>0.01</b>kg <br></td><td data-th="Ngày giờ" data-col-seq="3">08-05-2020 03:30:21</td><td class="text-right" data-col-seq="4"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                        <li><a href="/history/313975" ><span class="glyphicon glyphicon-eye-open"></span> Chi tiết</a></li>                        
+                         
+                    </ul>
+                </div></td></tr>
+<tr data-key="313884"><td data-th="Mã đơn hàng" data-col-seq="0">A2403-395</td><td data-th="Nhân viên" data-col-seq="1"> <a target="_blank"  title="Chi tiết nhân viên" href="/user/182"><i class="fa fa-eye" aria-hidden="true"></i> Kho Hà Nội(<i>adminkhovn</i>)</a></td><td data-th="Nội dung" data-col-seq="2">Quản trị: <b>adminkhovn</b><br/>Cập nhật thông tin kiện: <b>550001190216807</b><br/>Mã đơn hàng: <b>A2403-395</b><br></td><td data-th="Ngày giờ" data-col-seq="3">08-05-2020 01:54:48</td><td class="text-right" data-col-seq="4"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                        <li><a href="/history/313884" ><span class="glyphicon glyphicon-eye-open"></span> Chi tiết</a></li>                        
+                         
+                    </ul>
+                </div></td></tr>
+<tr data-key="312381"><td data-th="Mã đơn hàng" data-col-seq="0">A3779-7</td><td data-th="Nhân viên" data-col-seq="1"> <a target="_blank"  title="Chi tiết nhân viên" href="/user/182"><i class="fa fa-eye" aria-hidden="true"></i> Kho Hà Nội(<i>adminkhovn</i>)</a></td><td data-th="Nội dung" data-col-seq="2">Quản trị: <b>adminkhovn</b><br/>Cập nhật thông tin kiện: <b>557004644993452</b><br/>Mã đơn hàng: <b>A3779-7</b><br></td><td data-th="Ngày giờ" data-col-seq="3">07-05-2020 03:47:52</td><td class="text-right" data-col-seq="4"><div class="dropdown actions">
+                    <i id="dropdownMenu13" data-toggle="dropdown" aria-expanded="true" title="Actions" class="glyphicon glyphicon-menu-hamburger"></i>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu13">
+                        <li><a href="/history/312381" ><span class="glyphicon glyphicon-eye-open"></span> Chi tiết</a></li>                        
+                         
+                    </ul>
+                </div></td></tr>
+</tbody></table></div>
+    <div class="kv-panel-after"></div>
+    <div class="panel-footer">    <div class="kv-panel-pager">
+        <ul class="pagination"><li class="prev disabled"><span>&laquo;</span></li>
+<li class="active"><a href="/history/index?page=1" data-page="0">1</a></li>
+<li><a href="/history/index?page=2" data-page="1">2</a></li>
+<li><a href="/history/index?page=3" data-page="2">3</a></li>
+<li><a href="/history/index?page=4" data-page="3">4</a></li>
+<li><a href="/history/index?page=5" data-page="4">5</a></li>
+<li><a href="/history/index?page=6" data-page="5">6</a></li>
+<li><a href="/history/index?page=7" data-page="6">7</a></li>
+<li><a href="/history/index?page=8" data-page="7">8</a></li>
+<li><a href="/history/index?page=9" data-page="8">9</a></li>
+<li><a href="/history/index?page=10" data-page="9">10</a></li>
+<li class="next"><a href="/history/index?page=2" data-page="1">&raquo;</a></li></ul>
+    </div>
+    
+    <div class="clearfix"></div></div>
+</div></div></div>
+</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 2.3.0
+            </div>
+            <strong>Copyright &copy; 2014-2015.</strong> All rights reserved.
+        </footer>
+    </div>
+
+  <script src="/assets/116fe791/yii.js"></script>
+<script src="/assets/116fe791/yii.validation.js"></script>
+<script src="/assets/116fe791/yii.activeForm.js"></script>
+<script src="/assets/298354ee/dist/js/bootstrap-dialog.min.js"></script>
+<script src="/assets/1472305f/js/dialog-yii.min.js"></script>
+<script src="/assets/95c3371/js/kv-grid-export.min.js"></script>
+<script src="/assets/95c3371/js/jquery.resizableColumns.min.js"></script>
+<script src="/assets/95c3371/js/kv-grid-toggle.min.js"></script>
+<script src="/assets/116fe791/yii.gridView.js"></script>
+<script src="/assets/415e3cfd/jquery.pjax.js"></script>
+<script src="/plugins/select2/select2.js"></script>
+<script src="/js/moment-with-locales.js"></script>
+<script src="/plugins/datepicker/bootstrap-datepicker.js"></script>
+<script src="/plugins/iCheck/icheck.min.js"></script>
+<script src="/js/bootstrap-toggle.js"></script>
+<script src="/js/app.min.js"></script>
+<script src="/js/users.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/notify.js"></script>
+<script src="/js/chatbox.js"></script>
+<script src="/js/simple.money.format.js"></script>
+<script type="text/javascript">jQuery(document).ready(function () {
+jQuery('#order-search-form').yiiActiveForm([{"id":"tbhistorysearch-userid","name":"userID","container":".field-tbhistorysearch-userid","input":"#tbhistorysearch-userid","validate":function (attribute, value, messages, deferred, $form) {yii.validation.number(value, messages, {"pattern":/^\s*[+-]?\d+\s*$/,"message":"User ID must be an integer.","skipOnEmpty":1});}}], []);
+krajeeYiiConfirm('krajeeDialog');
+var kvGridInit_75b2bf46=function(){
+jQuery('#w0 .export-html').gridexport(kvGridExp_fb069215);jQuery('#w0 .export-csv').gridexport(kvGridExp_158f4d98);jQuery('#w0 .export-txt').gridexport(kvGridExp_0a35c183);jQuery('#w0 .export-xls').gridexport(kvGridExp_368e0eaa);jQuery('#w0 .export-json').gridexport(kvGridExp_6463fc66);jQuery("#w0-container").resizableColumns('destroy').resizableColumns({"store":null,"resizeFromBody":false});kvToggleData(kvTogOpts_ef5bd288);
+};
+kvGridInit_75b2bf46();
+jQuery('#w2').dropdown();
+jQuery("#w0-pjax").on('pjax:timeout', function(e){e.preventDefault()}).on('pjax:send', function(){$("#w0-pjax").addClass('kv-grid-loading')}).off('pjax:complete.9e204f90').on('pjax:complete.9e204f90', function(){setTimeout(kvGridInit_75b2bf46, 2500);$("#w0-pjax").removeClass('kv-grid-loading');
+kvToggleData(kvTogOpts_ef5bd288);});
+jQuery('#w0').yiiGridView({"filterUrl":"\/history\/index","filterSelector":"#w0-filters input, #w0-filters select"});
+jQuery(document).pjax("#w0-pjax a", {"push":true,"replace":false,"timeout":1000,"scrollTo":false,"container":"#w0-pjax"});
+jQuery(document).on("submit", "#w0-pjax form[data-pjax]", function (event) {jQuery.pjax.submit(event, {"push":true,"replace":false,"timeout":1000,"scrollTo":false,"container":"#w0-pjax"});});
+});</script>  <!-- modal -->
+  <div class="modal " id="myModal" style="display: none;">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close btn-close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h3 class="modal-title" id="exampleModalLabel">Thông báo</h3>
+              </div>
+              <div class="modal-body">
+                  <div class="modal-container"></div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-default pull-right btn-close" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+        $.ajax({
+             url: 'https://thietkewebos.com/thong-bao.html',
+              type: 'get',             
+              dataType: "json", 
+              success: function (rs) {
+                  if (rs.status) {
+                      $('#myModal').modal('show');
+                      $('.modal-container').html(rs.view);
+                  } 
+
+              }
+          });
+
+    });
+
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $("#myModal").modal({
+            show: false,
+            backdrop: 'static'
+        });
+        $('.btn-close').on('click',function(){
+            $('input[id=orderNumber]').focus();  
+        });       
+    });
+  </script>
+  </body>
+</html>

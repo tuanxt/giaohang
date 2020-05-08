@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Bắn mã vận đơn</title>
+    <link href="/assets/d0461e8f/css/bootstrap.css" rel="stylesheet">
+<link href="/assets/95c3371/css/kv-grid.min.css" rel="stylesheet">
+<link href="/assets/298354ee/dist/css/bootstrap-dialog.min.css" rel="stylesheet">
+<link href="/assets/95c3371/css/jquery.resizableColumns.min.css" rel="stylesheet">
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="/plugins/select2/select2.css" rel="stylesheet">
+<link href="/plugins/iCheck/minimal/blue.css" rel="stylesheet">
+<link href="/plugins/datepicker/datepicker3.css" rel="stylesheet">
+<link href="/css/skins/_all-skins.min.css" rel="stylesheet">
+<link href="/css/bootstrap-toggle.css" rel="stylesheet">
+<link href="/css/layout.css" rel="stylesheet">
+<style>.bootstrap-dialog .modal-header.bootstrap-dialog-draggable{cursor:move}</style>
+<script src="/assets/1472305f/js/dialog.min.js"></script>
+<script type="text/javascript">var krajeeDialogDefaults_71c625b2 = {"alert":{"type":"type-info","title":"Information","buttonLabel":"<span class=\"glyphicon glyphicon-ok\"></span> Ok"},"confirm":{"type":"type-warning","title":"Confirmation","btnOKClass":"btn-warning","btnOKLabel":"<span class=\"glyphicon glyphicon-ok\"></span> Ok","btnCancelLabel":"<span class=\"glyphicon glyphicon-ban-circle\"></span> Cancel"},"prompt":{"draggable":false,"title":"Information","buttons":[{"label":"Cancel","icon":"glyphicon glyphicon-ban-circle"},{"label":"Ok","icon":"glyphicon glyphicon-ok","cssClass":"btn-primary"}],"closable":false},"dialog":{"draggable":true,"title":"Information","buttons":[{"label":"Cancel","icon":"glyphicon glyphicon-ban-circle"},{"label":"Ok","icon":"glyphicon glyphicon-ok","cssClass":"btn-primary"}]}};
+var krajeeDialog_6d7f2d25 = {"id":"w2"};
+var krajeeDialog=new KrajeeDialog(true,krajeeDialog_6d7f2d25,krajeeDialogDefaults_71c625b2);
+var kvGridExp_7297d68d={"gridId":"w1","target":"_blank","messages":{"allowPopups":"Disable any popup blockers in your browser to ensure proper download.","confirmDownload":"Ok to proceed?","downloadProgress":"Generating the export file. Please wait...","downloadComplete":"Request submitted! You may safely close this dialog after saving your downloaded file."},"exportConversions":[{"from":"<span class=\"glyphicon glyphicon-ok text-success\"></span>","to":"Active"},{"from":"<span class=\"glyphicon glyphicon-remove text-danger\"></span>","to":"Inactive"}],"showConfirmAlert":true};
+var kvGridExp_98296853={"filename":"Don-hang-08-05-2020 23:10","showHeader":true,"showPageSummary":true,"showFooter":true};
+var kvGridExp_daf85275={"dialogLib":"krajeeDialog","gridOpts":kvGridExp_7297d68d,"genOpts":kvGridExp_98296853,"alertMsg":"created","config":{"worksheet":"ExportWorksheet","cssFile":"","colDelimiter":";","rowDelimiter":"\r\n"}};
+kvTogOpts_24c86618={"id":"w1-togdata-page","pjax":0,"mode":"page","msg":"There are 134,873 records. Are you sure you want to display them all?","lib":krajeeDialog};</script>      <script>
+          var homeUrl = 'https://nguonhang24h.vn';
+          var baseUrl = 'http://cms.nguonhang24h.vn';
+      </script>
+      <script src="/js/jQuery-2.1.4.min.js"></script>
+      <script src="/bootstrap/js/bootstrap.js"></script>
+      <script src="/js/main.js"></script>
+  </head>
+  <body class="skin-blue sidebar-mini wysihtml5-supported">
+           <div class="wrapper">
+        <header class="main-header">
+    <!-- Logo -->
+    <a href="/" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>H</b>S</span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><b>HS</b> PANEL</span>
+    </a>
+
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top" role="navigation">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+        </a>
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <li class="dropdown messages-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="label label-success">4</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">You have 4 messages</li>
+                        <li>
+                            <!-- inner menu: contains the actual data -->
+                            <ul class="menu">
+                                <li><!-- start message -->
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="/images/admin.png" class="img-circle" alt="User Image">
+                                        </div>
+                                        <h4>
+                                            Support Team
+                                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                        </h4>
+                                        <p>Why not buy a new awesome theme?</p>
+                                    </a>
+                                </li>
+                                <!-- end message -->
+                                <li>
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="/images/admin.png" class="img-circle" alt="User Image">
+                                        </div>
+                                        <h4>
+                                            AdminLTE Design Team
+                                            <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                                        </h4>
+                                        <p>Why not buy a new awesome theme?</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="/images/admin.png" class="img-circle" alt="User Image">
+                                        </div>
+                                        <h4>
+                                            Developers
+                                            <small><i class="fa fa-clock-o"></i> Today</small>
+                                        </h4>
+                                        <p>Why not buy a new awesome theme?</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="/images/admin.png" class="img-circle" alt="User Image">
+                                        </div>
+                                        <h4>
+                                            Sales Department
+                                            <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                                        </h4>
+                                        <p>Why not buy a new awesome theme?</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="/images/admin.png" class="img-circle" alt="User Image">
+                                        </div>
+                                        <h4>
+                                            Reviewers
+                                            <small><i class="fa fa-clock-o"></i> 2 days</small>
+                                        </h4>
+                                        <p>Why not buy a new awesome theme?</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer"><a href="#">See All Messages</a></li>
+                    </ul>
+                </li>
+                <!-- Notifications: style can be found in dropdown.less -->
+                <li class="dropdown notifications-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-bell-o"></i>
+                        <span class="label label-warning">10</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">You have 10 notifications</li>
+                        <li>
+                            <!-- inner menu: contains the actual data -->
+                            <ul class="menu">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
+                                        page and may cause design problems
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-users text-red"></i> 5 new members joined
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-user text-red"></i> You changed your username
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer"><a href="#">View all</a></li>
+                    </ul>
+                </li>
+
+
+                                    <li><a target="_blank" href="https://nguonhang24h.vn" class="pull-left"><i class="glyphicon glyphicon-home"></i> Open site</a>  </li>
+                    <li>
+                        <a href="/sign/out"><i class="glyphicon glyphicon-log-out"></i> Logout</a>
+                    </li>
+                            </ul>
+        </div>
+
+    </nav>
+</header>        <!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="/images/admin.png" class="img-circle" alt="">
+            </div>
+            <div class="pull-left info">
+                <p>adminkhovn</p>
+                <a href="javascript:void(0)"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+        </div>
+        <ul class="sidebar-menu">
+            <li class="header">MAIN NAVIGATION</li>
+            <li class="">
+                <a href="/"> <i class="fa fa-dashboard"></i>
+                    <span>Dashboard</span> <!--<i class="fa fa-angle-left pull-right"></i>-->
+                </a>
+            </li>
+                                                <li class="treeview ">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>                            <span> Quản lý đơn hàng</span>
+                                                            <i class="fa fa-angle-left pull-right"></i>
+                                                    </a>
+                                                    <ul class="treeview-menu ">
+                                                                    <li class="">
+                                        <a href="/orders/index">
+                                            <i class="fa fa-circle-o"></i>                                            Tất cả đơn hàng                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                            </ul>
+                                            </li>
+                                    <li class="treeview active">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>                            <span> Quản lý kho</span>
+                                                            <i class="fa fa-angle-left pull-right"></i>
+                                                    </a>
+                                                    <ul class="treeview-menu menu-open">
+                                                                    <li class="1">
+                                        <a href="/shipping/barcode">
+                                            <i class="fa fa-money" aria-hidden="true"></i>                                            Kho nhập mã vận đơn                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                                    <li class="">
+                                        <a href="/lo/index">
+                                            <i aria-hidden="true" class="glyphicon glyphicon-file"></i>                                            QL Phiếu xuất kho                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                                    <li class="">
+                                        <a href="/bag/index">
+                                            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>                                            Quản lý bao                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                                    <li class="">
+                                        <a href="/transfercode/index">
+                                            <i aria-hidden="true" class="glyphicon glyphicon-file"></i>                                            Quản lý mã vận đơn                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                            </ul>
+                                            </li>
+                                    <li class="treeview ">
+                        <a href="/history/index">
+                            <i class="fa fa-history" aria-hidden="true"></i>                            <span> Lịch sử người dùng</span>
+                                                    </a>
+                                            </li>
+                                    <li class="treeview ">
+                        <a href="javascript:void(0)">
+                            <i aria-hidden="true" class="glyphicon glyphicon-user"></i>                            <span> Thông tin tài khoản</span>
+                                                            <i class="fa fa-angle-left pull-right"></i>
+                                                    </a>
+                                                    <ul class="treeview-menu ">
+                                                                    <li class="">
+                                        <a href="/user/my-profile">
+                                            <i aria-hidden="true" class="glyphicon glyphicon-lock"></i>                                            Hồ sơ                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                                    <li class="">
+                                        <a href="/user/change-password">
+                                            <i aria-hidden="true" class="glyphicon glyphicon-lock"></i>                                            Thay đổi mật khẩu                                            <!--leve 3-->
+                                                                                    </a>
+                                                                            </li>
+                                                            </ul>
+                                            </li>
+                        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>        <div class="content-wrapper">
+            <section class="content-header">
+                <ol class="breadcrumb"><li><a href="/">Home</a></li>
+<li><a href="/shipping/barcode">Quản lý bắn mã vận đơn</a></li>
+<li class="active">Bắn mã vận đơn</li>
+</ol>            </section>
+            <section class="content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!--  -->
+
+<div class="tb-shipping-index">
+    <div class="box">
+    <div class="box-header with-border">
+        <h3 class="box-title"><i class="fa fa-pie-chart"></i> Bắn mã vận đơn</h3>
+    </div>
+    <div class="box-body">
+        <div class=" text-center">
+            <form id="barcode-form" class="form-horizontal" action="/shipping/barcode" method="post">
+                <input type="hidden" name="_csrf" value="ifys8bIFAhEvUFGtko-i8EcDiJy7AaII6Z1OO3nlBrWbIyS8FNhIr8fPqesfit5r_OhhZ8xQtfO5XOCnDvYEHw==">
+
+                <input style="width:50%" type="text" id="orderNumber" class="form-control" name="TbShippingSearch[barcode]" value="" placeholder="Nhập mã VĐ....">
+                <button type="submit" class="btn btn-primary btn-submitCode">Xác nhận</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('input[id=orderNumber]').focus();
+
+
+        $('body').on('click', '.btn-submitCode', function (e) {
+            Main.searchBareCode();
+
+            return false;
+
+        });
+
+        $('#orderNumber').keypress(function (e) {
+            if (e.which == '13') {
+                Main.searchBareCode();
+                  return false;
+            }
+        });
+
+    });
+</script>    <div id="w1" class="grid-view hide-resize" data-krajee-grid="kvGridInit_57175802"><div class="panel panel-primary">
+    <div class="panel-heading">    <div class="pull-right">
+        <div class="summary">Showing <b>1-10</b> of <b>134,873</b> items.</div>
+    </div>
+    <h3 class="panel-title">
+        <h3 class="panel-title"><i class="fa fa-fw fa-users" aria-hidden="true"></i> Danh sách mã vận đơn của đơn hàng </h3>
+    </h3>
+    <div class="clearfix"></div></div>
+    <div class="kv-panel-before">    <div class="btn-toolbar kv-grid-toolbar toolbar-container pull-right"><div class="btn-group"><a class="btn btn-default" href="/shipping/barcode" title="Reset Grid"><i class="glyphicon glyphicon-repeat"></i></a></div>
+<div class="btn-group">
+<button id="w3" class="btn btn-default dropdown-toggle" title="Export" data-toggle="dropdown"><i class='fa fa-share-square-o'></i>  <span class="caret"></span></button>
+
+<ul id="w4" class="dropdown-menu dropdown-menu-right"><li role="presentation" class="dropdown-header">Export Page Data</li>
+<li title="Semicolon -  Separated Values"><a class="export-xls" href="#" data-mime="application/excel" data-hash="9a25d90f6b0f02e07e2e7f28b3d3a3404740d74308e9a3865bb4ef4650b954f3gridviewDon-hang-08-05-2020 23:10application/excelutf-81{&quot;worksheet&quot;:&quot;ExportWorksheet&quot;,&quot;cssFile&quot;:&quot;&quot;,&quot;colDelimiter&quot;:&quot;;&quot;,&quot;rowDelimiter&quot;:&quot;\r\n&quot;}" tabindex="-1"><i class="fa fa-file-excel-o"></i> To Excel</a></li></ul>
+</div><form class="kv-export-form" action="/gridview/export/download" method="post" style="display:none" target="kvDownloadDialog">
+<input type="hidden" name="_csrf" value="IWMPC6onaY6Aw5F2p4OivIVLKRXM_0zw2FZWCjXGzYeMd1oQKxy9yk9aYcezIdu6RdkyH5XMeOQ8yM0UIQOTEQ==">
+<input type="hidden" name="module_id" value="gridview">
+<input type="hidden" name="export_hash">
+<input type="hidden" name="export_filetype">
+<input type="hidden" name="export_filename">
+<input type="hidden" name="export_mime">
+<input type="hidden" name="export_config">
+<input type="hidden" name="export_encoding" value="utf-8">
+<input type="hidden" name="export_bom" value="1">
+<textarea name="export_content"></textarea>
+</form></div>
+    
+    <div class="clearfix"></div></div>
+    <div id="w1-container" class="table-responsive kv-grid-container"><table id="tbl_manager" class="table table-bordered table-hover dataTable kv-grid-table table-striped kv-table-wrap"><colgroup><col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col class="skip-export"></colgroup>
+<thead>
+
+<tr><th data-col-seq="0"><a href="/shipping/barcode?sort=shippingCode" data-sort="shippingCode">Mã vận đơn</a></th><th data-col-seq="1"><a href="/shipping/barcode?sort=userID" data-sort="userID">Nhân viên kho</a></th><th data-col-seq="2">Khách hàng</th><th class="text-center" style="width: auto;" data-col-seq="3">Mã đơn hàng</th><th class="text-center" style="width: auto;" data-col-seq="4">Loại kiện hàng</th><th class="text-center kv-align-middle" style="width: auto;" data-col-seq="5">Kho đích</th><th class="text-center" style="width: auto;" data-col-seq="6">Ngày tạo</th><th class="text-center" data-col-seq="7">Trạng thái</th><th class="kv-align-center kv-align-middle skip-export kv-merged-header" style="width:80px;" rowspan="2" data-col-seq="8">Actions</th></tr><tr id="w1-filters" class="filters skip-export"><td><input type="text" class="form-control" name="TbShippingSearch[shippingCode]" value="" style="display:inline-block;margin-left: 5px" placeholder="Tìm kiếm mã VĐ.."></td><td></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><select class="form-control" name="TbShippingSearch[status]">
+<option value="" selected>- Tất cả -</option>
+<option value="0">Kiện vô chủ</option>
+<option value="1">Thành công</option>
+</select></td></tr>
+
+</thead>
+<tbody>
+<tr data-key="138861"><td data-th="Mã vận đơn" data-col-seq="0">689040885633=2</td><td data-th="Nhân viên kho" data-col-seq="1">adminkhovn</td><td data-th="Khách hàng" data-col-seq="2"></td><td class="text-center" data-th="Mã đơn hàng" data-col-seq="3">---</td><td class="text-center" data-th="Loại kiện hàng" data-col-seq="4">---</td><td class="text-center kv-align-middle" data-th="Kho đích" data-col-seq="5"><br/> </td><td class="text-center" data-th="Ngày tạo" data-col-seq="6">08-05-2020 14:32:51</td><td class="text-center" data-th="Trạng thái" data-col-seq="7"><button class="btn btn-danger btn-sm">Kiện vô chủ</button></td><td class="skip-export kv-align-center kv-align-middle" data-th="Thao tác" style="width:80px;" data-col-seq="8"></td></tr>
+<tr data-key="138859"><td data-th="Mã vận đơn" data-col-seq="0">75348866439406</td><td data-th="Nhân viên kho" data-col-seq="1">khotq</td><td data-th="Khách hàng" data-col-seq="2"></td><td class="text-center" data-th="Mã đơn hàng" data-col-seq="3">---</td><td class="text-center" data-th="Loại kiện hàng" data-col-seq="4">---</td><td class="text-center kv-align-middle" data-th="Kho đích" data-col-seq="5"><br/> </td><td class="text-center" data-th="Ngày tạo" data-col-seq="6">08-05-2020 08:29:37</td><td class="text-center" data-th="Trạng thái" data-col-seq="7"><button class="btn btn-danger btn-sm">Kiện vô chủ</button></td><td class="skip-export kv-align-center kv-align-middle" data-th="Thao tác" style="width:80px;" data-col-seq="8"></td></tr>
+<tr data-key="138854"><td data-th="Mã vận đơn" data-col-seq="0">9898782051710</td><td data-th="Nhân viên kho" data-col-seq="1">khotq</td><td data-th="Khách hàng" data-col-seq="2"></td><td class="text-center" data-th="Mã đơn hàng" data-col-seq="3">---</td><td class="text-center" data-th="Loại kiện hàng" data-col-seq="4">---</td><td class="text-center kv-align-middle" data-th="Kho đích" data-col-seq="5"><br/> </td><td class="text-center" data-th="Ngày tạo" data-col-seq="6">08-05-2020 08:28:57</td><td class="text-center" data-th="Trạng thái" data-col-seq="7"><button class="btn btn-danger btn-sm">Kiện vô chủ</button></td><td class="skip-export kv-align-center kv-align-middle" data-th="Thao tác" style="width:80px;" data-col-seq="8"></td></tr>
+<tr data-key="138853"><td data-th="Mã vận đơn" data-col-seq="0">9898782054642</td><td data-th="Nhân viên kho" data-col-seq="1">khotq</td><td data-th="Khách hàng" data-col-seq="2"></td><td class="text-center" data-th="Mã đơn hàng" data-col-seq="3">---</td><td class="text-center" data-th="Loại kiện hàng" data-col-seq="4">---</td><td class="text-center kv-align-middle" data-th="Kho đích" data-col-seq="5"><br/> </td><td class="text-center" data-th="Ngày tạo" data-col-seq="6">08-05-2020 08:28:54</td><td class="text-center" data-th="Trạng thái" data-col-seq="7"><button class="btn btn-danger btn-sm">Kiện vô chủ</button></td><td class="skip-export kv-align-center kv-align-middle" data-th="Thao tác" style="width:80px;" data-col-seq="8"></td></tr>
+<tr data-key="138852"><td data-th="Mã vận đơn" data-col-seq="0">9898782055133</td><td data-th="Nhân viên kho" data-col-seq="1">khotq</td><td data-th="Khách hàng" data-col-seq="2"></td><td class="text-center" data-th="Mã đơn hàng" data-col-seq="3">---</td><td class="text-center" data-th="Loại kiện hàng" data-col-seq="4">---</td><td class="text-center kv-align-middle" data-th="Kho đích" data-col-seq="5"><br/> </td><td class="text-center" data-th="Ngày tạo" data-col-seq="6">08-05-2020 08:28:33</td><td class="text-center" data-th="Trạng thái" data-col-seq="7"><button class="btn btn-danger btn-sm">Kiện vô chủ</button></td><td class="skip-export kv-align-center kv-align-middle" data-th="Thao tác" style="width:80px;" data-col-seq="8"></td></tr>
+<tr data-key="138849"><td data-th="Mã vận đơn" data-col-seq="0">9898782054298</td><td data-th="Nhân viên kho" data-col-seq="1">khotq</td><td data-th="Khách hàng" data-col-seq="2"></td><td class="text-center" data-th="Mã đơn hàng" data-col-seq="3">---</td><td class="text-center" data-th="Loại kiện hàng" data-col-seq="4">---</td><td class="text-center kv-align-middle" data-th="Kho đích" data-col-seq="5"><br/> </td><td class="text-center" data-th="Ngày tạo" data-col-seq="6">08-05-2020 08:28:15</td><td class="text-center" data-th="Trạng thái" data-col-seq="7"><button class="btn btn-danger btn-sm">Kiện vô chủ</button></td><td class="skip-export kv-align-center kv-align-middle" data-th="Thao tác" style="width:80px;" data-col-seq="8"></td></tr>
+<tr data-key="138846"><td data-th="Mã vận đơn" data-col-seq="0">9898788461250</td><td data-th="Nhân viên kho" data-col-seq="1">khotq</td><td data-th="Khách hàng" data-col-seq="2"></td><td class="text-center" data-th="Mã đơn hàng" data-col-seq="3">---</td><td class="text-center" data-th="Loại kiện hàng" data-col-seq="4">---</td><td class="text-center kv-align-middle" data-th="Kho đích" data-col-seq="5"><br/> </td><td class="text-center" data-th="Ngày tạo" data-col-seq="6">08-05-2020 08:27:59</td><td class="text-center" data-th="Trạng thái" data-col-seq="7"><button class="btn btn-danger btn-sm">Kiện vô chủ</button></td><td class="skip-export kv-align-center kv-align-middle" data-th="Thao tác" style="width:80px;" data-col-seq="8"></td></tr>
+<tr data-key="138830"><td data-th="Mã vận đơn" data-col-seq="0">4305192285606</td><td data-th="Nhân viên kho" data-col-seq="1">khotq</td><td data-th="Khách hàng" data-col-seq="2"></td><td class="text-center" data-th="Mã đơn hàng" data-col-seq="3">---</td><td class="text-center" data-th="Loại kiện hàng" data-col-seq="4">---</td><td class="text-center kv-align-middle" data-th="Kho đích" data-col-seq="5"><br/> </td><td class="text-center" data-th="Ngày tạo" data-col-seq="6">08-05-2020 08:25:47</td><td class="text-center" data-th="Trạng thái" data-col-seq="7"><button class="btn btn-danger btn-sm">Kiện vô chủ</button></td><td class="skip-export kv-align-center kv-align-middle" data-th="Thao tác" style="width:80px;" data-col-seq="8"></td></tr>
+<tr data-key="138829"><td data-th="Mã vận đơn" data-col-seq="0">9898789444417</td><td data-th="Nhân viên kho" data-col-seq="1">khotq</td><td data-th="Khách hàng" data-col-seq="2"></td><td class="text-center" data-th="Mã đơn hàng" data-col-seq="3">---</td><td class="text-center" data-th="Loại kiện hàng" data-col-seq="4">---</td><td class="text-center kv-align-middle" data-th="Kho đích" data-col-seq="5"><br/> </td><td class="text-center" data-th="Ngày tạo" data-col-seq="6">08-05-2020 08:25:43</td><td class="text-center" data-th="Trạng thái" data-col-seq="7"><button class="btn btn-danger btn-sm">Kiện vô chủ</button></td><td class="skip-export kv-align-center kv-align-middle" data-th="Thao tác" style="width:80px;" data-col-seq="8"></td></tr>
+<tr data-key="138828"><td data-th="Mã vận đơn" data-col-seq="0">319140379252</td><td data-th="Nhân viên kho" data-col-seq="1">khotq</td><td data-th="Khách hàng" data-col-seq="2"></td><td class="text-center" data-th="Mã đơn hàng" data-col-seq="3">---</td><td class="text-center" data-th="Loại kiện hàng" data-col-seq="4">---</td><td class="text-center kv-align-middle" data-th="Kho đích" data-col-seq="5"><br/> </td><td class="text-center" data-th="Ngày tạo" data-col-seq="6">08-05-2020 08:25:39</td><td class="text-center" data-th="Trạng thái" data-col-seq="7"><button class="btn btn-danger btn-sm">Kiện vô chủ</button></td><td class="skip-export kv-align-center kv-align-middle" data-th="Thao tác" style="width:80px;" data-col-seq="8"></td></tr>
+</tbody></table></div>
+    <div class="kv-panel-after"></div>
+    <div class="panel-footer">    <div class="kv-panel-pager">
+        <ul class="pagination"><li class="prev disabled"><span>&laquo;</span></li>
+<li class="active"><a href="/shipping/barcode?page=1&amp;per-page=10" data-page="0">1</a></li>
+<li><a href="/shipping/barcode?page=2&amp;per-page=10" data-page="1">2</a></li>
+<li><a href="/shipping/barcode?page=3&amp;per-page=10" data-page="2">3</a></li>
+<li><a href="/shipping/barcode?page=4&amp;per-page=10" data-page="3">4</a></li>
+<li><a href="/shipping/barcode?page=5&amp;per-page=10" data-page="4">5</a></li>
+<li><a href="/shipping/barcode?page=6&amp;per-page=10" data-page="5">6</a></li>
+<li><a href="/shipping/barcode?page=7&amp;per-page=10" data-page="6">7</a></li>
+<li><a href="/shipping/barcode?page=8&amp;per-page=10" data-page="7">8</a></li>
+<li><a href="/shipping/barcode?page=9&amp;per-page=10" data-page="8">9</a></li>
+<li><a href="/shipping/barcode?page=10&amp;per-page=10" data-page="9">10</a></li>
+<li class="next"><a href="/shipping/barcode?page=2&amp;per-page=10" data-page="1">&raquo;</a></li></ul>
+    </div>
+    
+    <div class="clearfix"></div></div>
+</div></div>
+</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 2.3.0
+            </div>
+            <strong>Copyright &copy; 2014-2015.</strong> All rights reserved.
+        </footer>
+    </div>
+
+  <script src="/assets/298354ee/dist/js/bootstrap-dialog.min.js"></script>
+<script src="/assets/116fe791/yii.js"></script>
+<script src="/assets/1472305f/js/dialog-yii.min.js"></script>
+<script src="/assets/95c3371/js/kv-grid-export.min.js"></script>
+<script src="/assets/95c3371/js/jquery.resizableColumns.min.js"></script>
+<script src="/assets/95c3371/js/kv-grid-toggle.min.js"></script>
+<script src="/assets/116fe791/yii.gridView.js"></script>
+<script src="/plugins/select2/select2.js"></script>
+<script src="/js/moment-with-locales.js"></script>
+<script src="/plugins/datepicker/bootstrap-datepicker.js"></script>
+<script src="/plugins/iCheck/icheck.min.js"></script>
+<script src="/js/bootstrap-toggle.js"></script>
+<script src="/js/app.min.js"></script>
+<script src="/js/users.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/notify.js"></script>
+<script src="/js/chatbox.js"></script>
+<script src="/js/simple.money.format.js"></script>
+<script type="text/javascript">jQuery(document).ready(function () {
+krajeeYiiConfirm('krajeeDialog');
+var kvGridInit_57175802=function(){
+jQuery('#w1 .export-xls').gridexport(kvGridExp_daf85275);jQuery("#w1-container").resizableColumns('destroy').resizableColumns({"store":null,"resizeFromBody":false});kvToggleData(kvTogOpts_24c86618);
+};
+kvGridInit_57175802();
+jQuery('#w3').dropdown();
+jQuery('#w1').yiiGridView({"filterUrl":"\/shipping\/barcode","filterSelector":"#w1-filters input, #w1-filters select"});
+});</script>  <!-- modal -->
+  <div class="modal " id="myModal" style="display: none;">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close btn-close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h3 class="modal-title" id="exampleModalLabel">Thông báo</h3>
+              </div>
+              <div class="modal-body">
+                  <div class="modal-container"></div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-default pull-right btn-close" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+        $.ajax({
+             url: 'https://thietkewebos.com/thong-bao.html',
+              type: 'get',             
+              dataType: "json", 
+              success: function (rs) {
+                  if (rs.status) {
+                      $('#myModal').modal('show');
+                      $('.modal-container').html(rs.view);
+                  } 
+
+              }
+          });
+
+    });
+
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $("#myModal").modal({
+            show: false,
+            backdrop: 'static'
+        });
+        $('.btn-close').on('click',function(){
+            $('input[id=orderNumber]').focus();  
+        });       
+    });
+  </script>
+  </body>
+</html>
