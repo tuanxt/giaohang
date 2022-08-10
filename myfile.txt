@@ -1,2 +1,3 @@
 .txt
 nano myfile.txt
+New file github
